@@ -10,7 +10,7 @@ class StackLL{
 		headTop = null;
 	}
 	
-	void push(int v){
+	void push(int v){//adding new element at first - else top operation not possible
 		//1st node
 		Node newNode = new Node(v);
 		if(headTop == null) {
@@ -21,7 +21,7 @@ class StackLL{
 		}
 	}
 	
-	void pop() {
+	void pop() {//deleting 1st node
 		if(headTop == null) {
 			System.out.println("Underflow");
 			return;
