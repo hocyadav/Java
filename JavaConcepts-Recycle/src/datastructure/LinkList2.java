@@ -1,5 +1,9 @@
 package datastructure;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 9, 2019
+ *
+ */
 class Node{
 	int data;
 	Node next;
@@ -33,8 +37,6 @@ class LList{
 		}
 		System.out.println("");
 	}
-	
-	
 }
 
 

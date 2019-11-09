@@ -2,6 +2,13 @@ package ds7thOctNight;
 
 import java.util.ArrayList;
 import java.util.Vector;
+
+/**
+ * 
+ * @author Hariom Yadav - Nov 7, 2019
+ *
+ */
+
 //https://www.geeksforgeeks.org/java-util-vector-class-java/
 public class Vector_DynamicArray {
 	public static void main(String[] args) {

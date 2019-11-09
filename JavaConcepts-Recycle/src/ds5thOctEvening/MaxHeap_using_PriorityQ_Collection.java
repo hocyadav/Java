@@ -3,6 +3,11 @@ package ds5thOctEvening;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.PriorityQueue;
+/**
+ * 
+ * @author Hariom Yadav - Nov 5, 2019
+ *
+ */
 
 public class MaxHeap_using_PriorityQ_Collection {
 	public static void main(String[] args) {

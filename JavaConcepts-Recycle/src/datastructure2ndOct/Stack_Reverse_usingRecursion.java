@@ -1,5 +1,9 @@
 package datastructure2ndOct;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 2, 2019
+ *
+ */
 public class Stack_Reverse_usingRecursion {
 	//know something
 	static Stack obj = new Stack();

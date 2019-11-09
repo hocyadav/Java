@@ -1,5 +1,9 @@
 package ds3rdOct;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 3, 2019
+ *
+ */
 class Node{
 	//know something
 	String data;

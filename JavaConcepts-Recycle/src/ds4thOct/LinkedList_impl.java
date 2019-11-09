@@ -1,5 +1,9 @@
 package ds4thOct;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 4, 2019
+ *
+ */
 //DS
 class Node{
 	//know

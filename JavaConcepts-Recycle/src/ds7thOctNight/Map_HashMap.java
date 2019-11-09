@@ -1,4 +1,5 @@
 package ds7thOctNight;
+
 // put(obj key, obj value), putAll(Map map),
 //remove(Object key), get(Object key), containsKey(Object key)
 //keySet() keys, entrySet() --keys+values
@@ -6,7 +7,11 @@ package ds7thOctNight;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 7, 2019
+ *
+ */
 public class Map_HashMap {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();

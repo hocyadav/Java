@@ -1,5 +1,9 @@
 package datastructure2ndOct;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 2, 2019
+ *
+ */
 //ds
 class Node{
 	//know something

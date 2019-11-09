@@ -1,5 +1,9 @@
 package ds6thOct;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 6, 2019
+ *
+ */
 public class Heap_impl_delete_from_MaxHeap {
 	private static void buildHeap(int[] arr, int len) {
 		//find non leaf node  : half - 1

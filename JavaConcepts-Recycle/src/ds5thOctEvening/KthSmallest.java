@@ -3,7 +3,11 @@ package ds5thOctEvening;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 5, 2019
+ *
+ */
 public class KthSmallest {
 	
 	// Function to find the K'th smallest element in the

@@ -1,5 +1,9 @@
 package ds4thOctNight;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 4, 2019
+ *
+ */
 //data struture
 class Node{
 	int data;

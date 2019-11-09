@@ -1,7 +1,11 @@
 package ds5thOctEvening;
 
 import java.util.Arrays;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 5, 2019
+ *
+ */
 public class KthLarger {
 	public static void main(String[] args) {
 		int[] ary = {10,9,8,7,6,55};

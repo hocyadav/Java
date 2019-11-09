@@ -1,5 +1,9 @@
 package ds5thOctEvening;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 5, 2019
+ *
+ */
 //ds
 class Node{
 	int data;
