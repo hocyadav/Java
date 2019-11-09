@@ -1,11 +1,14 @@
 package ds9thNovNight;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 9, 2019
+ *
+ */
 //Data structure
 class Node{
 	//know something
 	int data;
 	Node left, right;
-	
 	//does something
 	Node(int data){//no need to initialize left and right, sice constructor initialize non primitive data as null
 		this.data = data;
@@ -35,6 +38,13 @@ class Bst{
 	void insert(int key) {
 		root = in_rec(root, key);
 	}
+	/**
+	 * Helper Method to insert 
+	 * @param root - root node address
+	 * @param key - insert key
+	 * @return - updated root
+	 * 
+	 */
 	private Node in_rec(Node root, int key) {
 		if(root == null) {
 			root = new Node(key);
@@ -61,7 +71,12 @@ class Bst{
 			ino_rec(root.right);
 		}
 	}
-	
+	/**
+	 * @param key
+	 * key to be deleted
+	 * @param key2
+	 * key2 to be deleted
+	 */
 	void delete(int key) {
 		root = del(root, key);
 	}
@@ -93,6 +108,7 @@ class Bst{
 		}
 		return root;
 	}
+
 	private int min(Node right) {
 		//go left most
 		Node temp = right;
@@ -117,7 +133,7 @@ public class BST_search_insert_delete_print {
 		System.out.println("20 : "+obj.search(20));
 		System.out.println("11 : "+obj.search(11));
 		
-		obj.delete(1);
+		obj.delete(100);
 		obj.inorder();
 	
 		
