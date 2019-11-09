@@ -21,7 +21,7 @@ class ClassB extends ClassA{
 	}
 	
 	 void show(){
-		 super.show();
+		 super.show();//super is keyword here and in constructor its a method, by this we can call parent class methods
 		 System.out.println("show b");
 		 super.show();
 	 }
