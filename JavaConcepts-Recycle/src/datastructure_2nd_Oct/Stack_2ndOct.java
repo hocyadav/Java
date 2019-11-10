@@ -1,4 +1,4 @@
-package datastructure2ndOct;
+package datastructure_2nd_Oct;
 /**
  * 
  * @author Hariom Yadav - Nov 2, 2019
