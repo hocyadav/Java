@@ -1,4 +1,4 @@
-package ds7thOctNight;
+package ds_7th_Oct_Night;
 
 // put(obj key, obj value), putAll(Map map),
 //remove(Object key), get(Object key), containsKey(Object key)

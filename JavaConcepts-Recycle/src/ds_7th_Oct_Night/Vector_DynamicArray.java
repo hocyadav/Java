@@ -1,4 +1,4 @@
-package ds7thOctNight;
+package ds_7th_Oct_Night;
 
 import java.util.ArrayList;
 import java.util.Vector;

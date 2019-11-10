@@ -1,4 +1,4 @@
-package ds7thOct;
+package ds_7th_Oct;
 
 import java.util.LinkedList;
 import java.util.Queue;
