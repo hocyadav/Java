@@ -1,5 +1,9 @@
 package java_design_pattern_11th_nov;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 11, 2019
+ *
+ */
 public class Singleton_thread_safe_body {
 	// private static obj
 	private static Singleton_thread_safe_body obj;

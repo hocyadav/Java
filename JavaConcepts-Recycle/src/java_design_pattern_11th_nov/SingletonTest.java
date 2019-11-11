@@ -1,5 +1,9 @@
 package java_design_pattern_11th_nov;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 11, 2019
+ *
+ */
 public class SingletonTest {
 	public static void main(String[] args) {
 		

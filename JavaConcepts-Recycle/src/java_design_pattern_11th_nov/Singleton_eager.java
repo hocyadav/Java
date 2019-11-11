@@ -1,5 +1,9 @@
 package java_design_pattern_11th_nov;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 11, 2019
+ *
+ */
 //singleton eager initialization
 public class Singleton_eager {
 	//1. obj / instance make as private and static + create new obj

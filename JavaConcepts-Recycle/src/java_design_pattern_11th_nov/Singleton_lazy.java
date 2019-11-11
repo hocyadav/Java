@@ -1,5 +1,9 @@
 package java_design_pattern_11th_nov;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 11, 2019
+ *
+ */
 //Singleton lazy initialization
 public class Singleton_lazy {
 	//1. create static instance obj
