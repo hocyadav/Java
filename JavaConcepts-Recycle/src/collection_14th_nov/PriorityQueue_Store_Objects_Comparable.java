@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
 
-class Student implements Comparable<Student>{
+class Student implements Comparable<Student>{//Comparable - compareTo(o1) , //Comparator - compare(o1,o2)
 	//know something
 	int rollNo;
 	String name;
