@@ -35,7 +35,7 @@ class Student implements Comparable<Student>{
 	*/
 }
 
-public class PriorityQueue_Store_Objects {
+public class PriorityQueue_Store_Objects_Comparable {
 	public static void main(String[] args) {
 		Queue<Student> pq = new PriorityQueue<>();
 		//PriorityQueue<Student> pq = new PriorityQueue<>();//same as above
