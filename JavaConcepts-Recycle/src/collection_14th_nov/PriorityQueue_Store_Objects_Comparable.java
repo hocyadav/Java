@@ -3,7 +3,11 @@ package collection_14th_nov;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 14, 2019
+ *
+ */
 class Student implements Comparable<Student>{//Comparable - compareTo(o1) , //Comparator - compare(o1,o2)
 	//know something
 	int rollNo;

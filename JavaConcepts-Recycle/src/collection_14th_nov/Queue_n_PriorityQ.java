@@ -3,7 +3,11 @@ package collection_14th_nov;
 import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 14, 2019
+ *
+ */
 public class Queue_n_PriorityQ {
 	public static void main(String[] args) {
 		

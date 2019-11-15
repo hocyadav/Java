@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 14, 2019
+ *
+ */
 class Std implements Comparator<Std>{
 	int roll;
 	@Override
