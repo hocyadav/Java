@@ -2,7 +2,11 @@ package collection_PQ_15th_nov;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 15, 2019
+ *
+ */
 class DummyClass implements Comparator<String>{
 	public int compare(String s1, String s2) {//unimplemented method
 		return s1.compareTo(s2);
