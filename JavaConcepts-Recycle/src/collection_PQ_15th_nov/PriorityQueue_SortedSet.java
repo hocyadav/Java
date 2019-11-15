@@ -6,7 +6,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 16, 2019
+ *
+ */
 public class PriorityQueue_SortedSet {
 
 	public static void main(String[] args) {
@@ -45,9 +49,6 @@ public class PriorityQueue_SortedSet {
 		System.out.println("sList obj 		:"+sList);
 		Collections.sort(sList, comparatorObj);//sort student object based on roll no
 		System.out.println("sList obj sorted	:"+sList);
-		
-		
-		
 		
 		
 	}
