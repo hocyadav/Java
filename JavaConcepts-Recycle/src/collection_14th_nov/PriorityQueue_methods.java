@@ -5,6 +5,17 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+class Std implements Comparator<Std>{
+	int roll;
+	@Override
+	public int compare(Std o1, Std o2) {
+		if(o1.roll > o2.roll) return 1;
+		else if(o1.roll < o2.roll) return -1;
+		return 0;
+	}
+	
+}
+
 public class PriorityQueue_methods {
 	public static void main(String[] args) {
 		//1. PriorityQueue() 
@@ -12,6 +23,7 @@ public class PriorityQueue_methods {
 		//that orders its elements according to their natural ordering.
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();//PriorityQueue()
 		pq.add(12);	pq.add(1);	pq.add(45);
+		System.out.println("PQ - sysout bt not in order : "+pq);
 		
 		//2. PriorityQueue(Collection<E> c)
 		//reates a PriorityQueue containing the elements in the specified collection.
@@ -45,7 +57,7 @@ public class PriorityQueue_methods {
 		//Creates a PriorityQueue with the specified initial capacity that orders its elements 
 		//according to the specified comparator
 		
-		//PriorityQueue<Integer> pq4 = new PriorityQueue<Integer>(4, Comparator<Integer> comparator);
+		PriorityQueue<Std> pq4 = new PriorityQueue<Std>(4, new Std());//capacity + class obj that contain comparator interace unimplemented method
 		
 		
 		//5. PriorityQueue(PriorityQueue<E> c)
