@@ -1,7 +1,11 @@
 package priority_queue_comparable_comparator_18th_nov;
 
 import java.util.Comparator;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 18, 2019
+ *
+ */
 public class Student1 implements Comparable<Student1>{
 	int roll;
 	String name;

@@ -6,10 +6,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
-
-
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 18, 2019
+ *
+ */
 public class PriorityQueue_all_methods {
 	public static void main(String[] args) {
 		//obj using Q
