@@ -38,6 +38,7 @@ public class PriorityQueue_all_methods {
 		System.out.println(pq4);//this will sort and print so required Comparable interface impl
 		
 		//Store obj of Student2 - comparator 
+		//comparator obj - with anonymous obj creation : without lambda expression
 		Comparator cObj = new Comparator<Student2>() {
 
 			@Override
@@ -47,6 +48,13 @@ public class PriorityQueue_all_methods {
 				return 0;
 			}
 		};
+			
+		//comparator with lambda expression
+		Comparator<Student2> cObj2 =(Student2 o1, Student2 o2) -> {
+				if(o1.roll > o1.roll) return 1;
+				else if(o1.roll < o1.roll) return -1;
+				return 0;
+		};
 		
 		PriorityQueue<Student2> pq5 = new PriorityQueue<>(2, cObj);//initial capacity with comparator obj
 		Student2 s11 = new Student2(5, "hari");
@@ -54,7 +62,11 @@ public class PriorityQueue_all_methods {
 		Student2 s33 = new Student2(2, "aa");
 		
 		pq5.add(s11); pq5.add(s22); pq5.add(s33);
-		System.out.println(pq5);
+		System.out.println("pq5 : "+pq5);
+		System.out.print("PQ5 : ");
+		while(!pq5.isEmpty())
+			System.out.print(pq5.poll().name+" ");
+		System.out.println();
 		
 		//add collection
 		List<Integer> l1 = new ArrayList<>();
