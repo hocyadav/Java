@@ -1,5 +1,9 @@
 package ds_n_LRU_impl_21st_nov;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 21, 2019
+ *
+ */
 //ds
 class StackA{
 	//know somethng
