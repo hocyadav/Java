@@ -1,4 +1,4 @@
-package ds_21st_nov;
+package ds_n_LRU_impl_21st_nov;
 
 //ds
 class StackA{
