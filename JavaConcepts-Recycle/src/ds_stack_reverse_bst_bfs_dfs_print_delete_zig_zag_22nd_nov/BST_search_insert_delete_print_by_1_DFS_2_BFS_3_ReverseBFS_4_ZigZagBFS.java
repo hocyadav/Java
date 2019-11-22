@@ -165,24 +165,24 @@ class BstAllMethods{
 	}
 	
 	public void ZigZagLelelOrderBFS() {
-		Stack<Node> st = new Stack<>();
-		st.push(root);
+		Stack<Node> st1 = new Stack<>();
+		Stack<Node> st2 = new Stack<>();
+		
+		st1.push(root);
 		System.out.print("Level Order Zig Zag BFS 	: ");
-		while(!st.empty()) {
+		while(! st1.empty()) {
 			
-			Stack<Node> st2 = st;
-			Node t = st2.peek();
-			
-			while(!st2.empty()) {
-				System.out.print(st2.pop().data+" ");
+			while(!st1.empty()) {
+				Node t = st2.peek();
+				System.out.print(t.data+" ");
+				st2.push(t);
 			}
 			
 			//add child node - same order as in BFS Queue
-			st.clear();
-			if(t.left != null)
-				st.push(t.left);
-			if(t.right != null)
-				st.push(t.right);
+			while(! st2.empty()) {
+				Node t = st2.pop();
+				
+			}
 		}
 		System.out.println();
 	}
@@ -200,7 +200,7 @@ public class BST_search_insert_delete_print_by_1_DFS_2_BFS_3_ReverseBFS_4_ZigZag
 		obj.delete(3); obj.printInorder();
 		obj.levelOrderBFS();
 		obj.levelOrderReverseBFS();
-		obj.ZigZagLelelOrderBFS();
+		//obj.ZigZagLelelOrderBFS();
 		
 		obj.insert(3); obj.levelOrderBFS(); obj.printInorder();
 		obj.insert(25); 
@@ -208,7 +208,7 @@ public class BST_search_insert_delete_print_by_1_DFS_2_BFS_3_ReverseBFS_4_ZigZag
 		obj.insert(8); obj.printInorder();
 		obj.levelOrderBFS();
 		obj.levelOrderReverseBFS();
-		obj.ZigZagLelelOrderBFS();
+		//obj.ZigZagLelelOrderBFS(); TODO : impl
 		
 	}
 }
