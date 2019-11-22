@@ -59,10 +59,7 @@ class LruCache{
 				
 		System.out.println();
 	}
-	
-	
 }
-
 
 public class Lru_cache_Deque_HashSet {
 	public static void main(String[] args) {
