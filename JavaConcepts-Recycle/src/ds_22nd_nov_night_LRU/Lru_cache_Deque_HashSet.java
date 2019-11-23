@@ -33,6 +33,7 @@ class LruCache{
 			
 		}else {//present in set -> that means present in deque cache
 			//1. make space - search + remove
+			System.out.println("else ");
 			Iterator<Integer> it = dq.iterator();
 			int index = 0;
 			while(it.hasNext()) {
@@ -45,7 +46,8 @@ class LruCache{
 			
 			//2. add
 			dq.addFirst(key);
-			set.add(key);
+			System.out.println("key contains : "+key+" - "+set.contains(key));
+			set.add(key);//not required since else block here means already present in set - we can cross verify
 		}
 	}
 	/**
@@ -67,6 +69,7 @@ public class Lru_cache_Deque_HashSet {
 		obj.refer(1); obj.print();
 		obj.refer(2); obj.print();
 		obj.refer(4); obj.print();
+		obj.refer(1); obj.print();
 		obj.refer(1); obj.print();
 		obj.refer(5); obj.print();
 		obj.refer(1); obj.print();
