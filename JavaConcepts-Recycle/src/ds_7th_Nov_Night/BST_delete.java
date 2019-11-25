@@ -37,7 +37,7 @@ class BST{
 	private Node del_rec(Node root, int key) {//30 min
 		//base case
 		if(root == null) return root;
-		//if(root.data == key) return null;
+		//if(root.data == key) return null; this case we are handling in else block
 		
 		if(key < root.data)//go left
 			root.left = del_rec(root.left, key);
@@ -107,9 +107,9 @@ public class BST_delete {
 		obj.root.right = new Node(15);
 		obj.inorder();
 		System.out.println("");
-		obj.delete(10);
-		obj.insert(10);
-		obj.delete(8);
+		obj.delete(10);obj.inorder();System.out.println();
+		obj.insert(10);obj.inorder();System.out.println();
+		obj.delete(8);obj.inorder();System.out.println();
 		obj.insert(8);
 		obj.inorder();
 		
