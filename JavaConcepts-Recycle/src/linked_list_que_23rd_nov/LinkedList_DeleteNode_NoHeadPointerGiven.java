@@ -60,7 +60,7 @@ class Linked_List{
 	
 }
 //Test Data Structure
-public class DeleteNode_NoHeadPointerGiven {
+public class LinkedList_DeleteNode_NoHeadPointerGiven {
 	public static void main(String[] args) {
 		Linked_List obj = new Linked_List();
 		obj.insertLast(1); obj.print();
