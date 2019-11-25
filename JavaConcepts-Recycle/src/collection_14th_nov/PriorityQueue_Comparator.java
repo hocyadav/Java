@@ -36,7 +36,7 @@ public class PriorityQueue_Comparator {
 		
 		Random robj = new Random();
 		
-		int i = robj.nextInt(100);//it will give one number between 0 - 100 ?
+		int i = robj.nextInt(100);//TODO: it will give one number between 0 - 100 ?
 		Student_2 obj1 = new Student_2(i, "hari");
 		
 		int j = robj.nextInt(100);
