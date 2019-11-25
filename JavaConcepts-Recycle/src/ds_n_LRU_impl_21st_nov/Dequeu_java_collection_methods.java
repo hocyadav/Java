@@ -13,7 +13,6 @@ public class Dequeu_java_collection_methods {
 	public static void main(String[] args) {
 		Deque<Integer> dq = new LinkedList<>();
 		
-		
 		dq.add(12);dq.add(13);
 		System.out.println("add		: "+dq);
 		dq.addFirst(10);
