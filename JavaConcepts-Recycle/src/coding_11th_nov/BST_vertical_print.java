@@ -69,7 +69,9 @@ class BST{
 		TreeMap<Integer, Vector<Integer>> hmap = new TreeMap<>();
 		//call inorder and save in this hmap
 		int distance = 0;//root as 0 distance , move left and -1, riht +1
-		verticalUtility(root, hmap, hmap.size(), distance);
+		//verticalUtility(root, hmap, hmap.size(), distance);
+		//verticalUtility(root, hmap, distance, hmap.size());
+		verticalUtility(root, hmap, distance);
 		
 		System.out.println("BST Vertical Order : ");
 		//print the tree map - entry wise
@@ -84,13 +86,13 @@ class BST{
 	 * @param size
 	 * @param distance
 	 */
-	private void verticalUtility(Node root, TreeMap<Integer,Vector<Integer>> hmap, int distance, int size) {
+	private void verticalUtility(Node root, TreeMap<Integer,Vector<Integer>> hmap, int distance) {
 		//get distance value from hasmap and return vector(linked list), 
 		if(root == null)
 			return;
 		
 		//store current data in dynamic array(Vector / LL) 
-		Vector<Integer> arrLL = hmap.get(distance);
+		Vector<Integer> arrLL = hmap.get(distance);//get all data at particular distance value, we will get 0 or more
 		if(arrLL == null) {//if list not present then create add data
 			arrLL = new Vector<Integer>();
 			arrLL.add(root.data);
@@ -102,9 +104,9 @@ class BST{
 
 		//now call left side
 		
-		verticalUtility(root.left, hmap, distance-1, size);
+		verticalUtility(root.left, hmap, distance-1);
 		//now call right side
-		verticalUtility(root.right, hmap, distance+1, size);
+		verticalUtility(root.right, hmap, distance+1);
 		
 	}
 	
