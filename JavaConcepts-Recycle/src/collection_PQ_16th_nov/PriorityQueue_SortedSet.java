@@ -54,3 +54,12 @@ public class PriorityQueue_SortedSet {
 	}
 
 }
+/**
+ * 
+
+[1, 22, 2]
+[1, 2, 22]
+sList obj 		:[collection_PQ_16th_nov.Student@7852e922, collection_PQ_16th_nov.Student@4e25154f, collection_PQ_16th_nov.Student@70dea4e]
+sList obj sorted	:[collection_PQ_16th_nov.Student@7852e922, collection_PQ_16th_nov.Student@70dea4e, collection_PQ_16th_nov.Student@4e25154f]
+
+ */ 

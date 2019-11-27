@@ -25,3 +25,9 @@ public class PriorityQueue_Comparator_method2 {
 		
 	}
 }
+/**
+ * 
+
+ [o, om, yadav]
+collection_PQ_16th_nov.DummyClass@7852e922
+ * 
