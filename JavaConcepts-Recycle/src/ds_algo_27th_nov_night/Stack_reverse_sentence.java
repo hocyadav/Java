@@ -1,4 +1,4 @@
-package ds_algo_27th_nov;
+package ds_algo_27th_nov_night;
 
 import java.util.Stack;
 /**
