@@ -13,3 +13,7 @@ public class Extract_Int_From_String_Rajat {
 		//similary for others index
 	}
 }
+/**
+1
+
+*/
