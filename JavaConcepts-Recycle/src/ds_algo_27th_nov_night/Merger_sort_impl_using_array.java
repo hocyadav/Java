@@ -1,16 +1,23 @@
 package ds_algo_27th_nov_night;
-//TODO : not working
+/**
+ * 
+ * @author Hariom Yadav | 27-Nov-2019
+ *
+ */
 public class Merger_sort_impl_using_array {
 	public static void main(String[] args) {
 		int[] arr = {12,4,1,45,6,3};
 		
 		for(int i: arr)
 			System.out.print(i+" ");
+		System.out.println();
 		
 		int start = 0;
 		int end = arr.length - 1;
 		mergeSort(arr,start, end);
 		
+		for(int i: arr)
+			System.out.print(i+" ");
 		
 	}
 
@@ -30,7 +37,7 @@ public class Merger_sort_impl_using_array {
 	private static void merge(int[] arr, int start, int mid, int end) {
 		//find length
 		int l_len = (mid - start) + 1;//end - start + 1
-		int r_len = (end - mid+1) + 1;//end - start + 1
+		int r_len = (end - mid);//end - start + 1
 		
 		//declare arry
 		int[] l_arr = new int[l_len];
@@ -45,7 +52,7 @@ public class Merger_sort_impl_using_array {
 		
 		int i=0, j=0, k=start;
 		
-		while(start < end) {
+		while(i<l_len && j<r_len) {
 			if(l_arr[i] < r_arr[j]) {
 				arr[k] = l_arr[i];
 				k++; i++;

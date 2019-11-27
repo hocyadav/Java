@@ -1,5 +1,9 @@
 package algo_25th_nov;
-//TODO : not working
+/**
+ * 
+ * @author Hariom Yadav | 25-Nov-2019
+ *
+ */
 public class MergeSort_impl_using_Array {
 	public static void main(String[] args) {
 		int[] arr = {2,4,1,6,9,8,3};
@@ -32,16 +36,18 @@ public class MergeSort_impl_using_Array {
 	private static void mergeTwoSortedArray(int[] arr, int start, int mid, int end) {
 		//size of 2 sub array
 		int leftSize	= (mid - start) + 1;//end - start + 1
-		int rightSize	= (end - mid + 1) + 1;//start index is mid+1
+		int rightSize	= (end - mid);//start index is mid+1
 		
 		//2 temp array + copy all left and right array content
 		int[] leftArr 	= new int[leftSize];
 		int[] rightArr	= new int[rightSize];
+		
 		//copy
 		for(int i=0; i<leftSize; i++)
 			leftArr[i] 	= arr[start + i];//initial start = 0, i = 0
+		
 		for(int j=0; j<rightSize; j++)
-			rightArr[j]	= arr[mid+1 + j];
+			rightArr[j]	= arr[mid+1 + j];//increment by step, intial step is mid+1 and inc by j
 		
 		int i = 0, j = 0;
 		int k = start;
