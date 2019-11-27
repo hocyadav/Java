@@ -34,3 +34,8 @@ public class Queue_n_PriorityQ {
 				
 	}
 }
+/**
+1 12 45 
+1 12 45 
+
+*/

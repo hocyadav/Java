@@ -53,3 +53,9 @@ public class PriorityQueue_Comparator {
 			System.out.print(pq.poll().rollNo+" ");
 	}
 }
+/**
+
+hari
+12 63 69 
+  
+ */

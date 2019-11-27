@@ -127,3 +127,14 @@ public class BST_vertical_print {
 		obj.printVerticalBST();
 	}
 }
+/**
+ *console output
+
+Inorder : 7 8 9 10 11 12 13 14 15 
+BST Vertical Order : 
+[7]
+[10, 8, 11]
+[9, 13, 12, 14]
+[15]
+
+ */

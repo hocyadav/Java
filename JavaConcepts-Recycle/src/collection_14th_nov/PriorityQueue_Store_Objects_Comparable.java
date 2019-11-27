@@ -74,3 +74,12 @@ public class PriorityQueue_Store_Objects_Comparable {
 		
 	}
 }
+/**
+ * 
+hari
+10 yadav 
+46 om 
+60 hari 
+ * 
+ */
+

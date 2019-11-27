@@ -26,3 +26,10 @@ public class Interface_n_Class_Object_Creation {
 	}
 
 }
+
+/**
+
+collection_14th_nov.Class1@7852e922
+collection_14th_nov.Class1@4e25154f
+
+*/

@@ -96,3 +96,21 @@ public class PriorityQueue_methods {
 		
 	}
 }
+/**
+ * 
+ * 
+ * 
+ PQ - sysout bt not in order : [1, 12, 45]
+[12, 23, 34, 3]
+PQ2 : 3 12 23 34 
+size : 0
+size : 8
+PQ3 (some addition + addAll arrayList collection): 3 3 12 12 23 34 34 45 
+PQ5 : 3 12 23 34 
+PQ6 to Array Object to Integer : 34 - 34 23 - 23 12 - 12 3 - 3 
+PQ6 (reverse of PQ2)  : 34 23 12 3  
+ 
+ * 
+ * 
+ */
+
