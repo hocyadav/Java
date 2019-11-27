@@ -6,8 +6,9 @@ package ds_algo_27th_nov_night;
  */
 public class Merger_sort_impl_using_array {
 	public static void main(String[] args) {
-		int[] arr = {12,4,1,45,6,3};
+		int[] arr = {12,4,1,45,6,3,0,100,11};
 		
+		System.out.print("INPUT : ");
 		for(int i: arr)
 			System.out.print(i+" ");
 		System.out.println();
@@ -16,6 +17,7 @@ public class Merger_sort_impl_using_array {
 		int end = arr.length - 1;
 		mergeSort(arr,start, end);
 		
+		System.out.print("OUTPUT: ");
 		for(int i: arr)
 			System.out.print(i+" ");
 		
@@ -75,3 +77,7 @@ public class Merger_sort_impl_using_array {
 		
 	}
 }
+/**
+INPUT : 12 4 1 45 6 3 0 100 11 
+OUTPUT: 0 1 3 4 6 11 12 45 100 
+**/
