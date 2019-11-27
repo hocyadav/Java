@@ -78,11 +78,13 @@ class Bst{
 	 * key2 to be deleted
 	 */
 	void delete(int key) {
+		System.out.println("Delete : "+key + " ");
 		root = del(root, key);
 	}
 	private Node del(Node root, int key) {
 		if(root == null) return null;
-		else if(key < root.data)//go left
+		
+		else if(key < root.data)//go left + update left root pointer
 			root.left = del(root.left, key);
 		else if(key > root.data)//go right
 			root.right = del(root.right, key);
@@ -127,14 +129,28 @@ public class BST_search_insert_delete_print {
 		Bst obj = new Bst();
 		obj.inorder();
 		obj.insert(10);obj.inorder();
-		obj.insert(1);obj.insert(100);obj.insert(20);
-		obj.inorder();
+		obj.insert(1);obj.insert(100);obj.insert(20); obj.inorder();
 		System.out.println("10 : "+obj.search(10));
 		System.out.println("20 : "+obj.search(20));
 		System.out.println("11 : "+obj.search(11));
 		
 		obj.delete(100);
 		obj.inorder();
+		
+		
+		obj.delete(20);
+		obj.inorder();
+		obj.delete(1);
+		obj.inorder();
+		
+		obj.delete(10);
+		obj.inorder();
+		
+		obj.delete(100);
+		obj.inorder();
+		
+		
+		
 	
 		
 		
