@@ -44,9 +44,6 @@ class BinaryST{
 	private Node del_rec(Node root2) {
 		//tree empty - base case
 		if(root == null) return root;
-		
-		
-		
 		return null;
 	}
 	void inorder() {

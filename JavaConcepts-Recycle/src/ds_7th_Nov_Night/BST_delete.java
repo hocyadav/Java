@@ -31,6 +31,7 @@ class BST{
 	}
 	
 	void delete(int key) {
+		System.out.println("delete "+key+" ");
 		root = del_rec(root, key);
 	}
 
