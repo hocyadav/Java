@@ -6,6 +6,7 @@ package ds_algo_28th_nov;
  *
  */
 
+//declare - data structure for LL
 class Node{
 	int data;
 	Node next;
@@ -15,7 +16,7 @@ class Node{
 	}
 }
 
-
+//Use -  data structure 
 class Linkedlist{
 	Node head;
 	
