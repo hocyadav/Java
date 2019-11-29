@@ -18,6 +18,7 @@ public class EvenLengthPalindrom {
 		StringBuffer sb = new StringBuffer(nthStr);
 		//for 1 -> 11, 2 -> 22, 3 -> 33, ... 10 -> 1001, 12 -> 1221 ... for given input output is append as mirror image
 		int j = nthStr.length()-1;
+		
 		while(j >= 0) {
 			sb.append(nthStr.charAt(j));
 			j--;
