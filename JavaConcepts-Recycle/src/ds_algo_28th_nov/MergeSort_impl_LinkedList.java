@@ -24,7 +24,6 @@ class Linkedlist{
 		Node nn = new Node(key);
 		if(head == null) {
 			head = nn;
-			return;
 		}else {
 			Node t = head;
 			while(t.next != null)
@@ -53,7 +52,6 @@ public class MergeSort_impl_LinkedList {
 		obj.insert(12); obj.insert(23); obj.insert(1); obj.insert(5);
 		obj.insert(-1); obj.insert(90); obj.insert(10); obj.insert(0);
 		
-		
 		System.out.print("Input List  : ");
 		obj.print();
 		
@@ -64,11 +62,11 @@ public class MergeSort_impl_LinkedList {
 	}
 
 	private static Node mergeSort(Node head) {
-		if(head == null || head.next == null) 
+		if(head == null || head.next == null)//base case : 0 node / 1 node 
 			return head;
-		else {
+		else {//more than 1 node (Logically sorting start from more than 1 node)
 			//1 mid
-			Node mid = getMid(head);
+			Node mid = getMid_by_SlowFastPointer(head);
 			Node firstHalf = head;
 			Node secHalf = mid.next;
 			mid.next = null;
@@ -90,7 +88,7 @@ public class MergeSort_impl_LinkedList {
 	 * @param head
 	 * @return
 	 */
-	private static Node getMid(Node head) {
+	private static Node getMid_by_SlowFastPointer(Node head) {//head has more than 1 data, i.e. 2,3,4..
 		//if(head == null) return null;//not required since already check present in base case
 		if(head == null) 
 			return null;
@@ -101,15 +99,13 @@ public class MergeSort_impl_LinkedList {
 				slow = slow.next;
 				fast = fast.next.next;
 			}
-			
 			return slow;
 		}
 	}
-
 	/**
 	 * Sort 2 sorted LL : 
 	 * input 2 sorted LL, output : merge them + sort
-	 * 
+	 *
 	 * @param firstHalf
 	 * @param secHalf
 	 * @return
@@ -132,7 +128,6 @@ public class MergeSort_impl_LinkedList {
 		}
 		return result;
 	}
-
 }
 /**
  * 
