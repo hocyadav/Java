@@ -1,5 +1,9 @@
 package problem_solving_skill_29th_nov;
-
+/**
+ * 
+ * @author Hariom Yadav - Nov 29, 2019
+ *
+ */
 public class EvenLengthPalindrom {
 
 	public static void main(String[] args) {
