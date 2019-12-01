@@ -4,7 +4,11 @@ package ds_4th_Oct;
  * @author Hariom Yadav - Nov 4, 2019
  *
  */
-//data srtructure 
+//data structure : array : 1,2,3,4 ..
+			//	(start of array)front OUT member // (end of array)rear IN member 
+			//OUT : front same position in array + rear move 1 left i.e. for loop shift 1 left
+			//IN : front same position in array + rear move 1 right i.e. rear++
+
 class Queue{
 	//know something
 	int front, rear;
@@ -35,7 +39,7 @@ class Queue{
 		for(int i=0;i<rear-1;i++) {
 			queue[i] = queue[i+1];
 		}
-		--rear;
+		rear--;
 	}
 	
 	void print() {
