@@ -44,7 +44,7 @@ class Queue{
 	
 	void print() {
 		System.out.print("Queue : ");
-		for(int i=0; i<rear;i++) {
+		for(int i=0; i<rear;i++) {//i<rear coz after IN i.e. enqueue rear will be increment by 1 and that rear value is out of bound
 			System.out.print(queue[i]+" ");
 		}
 		System.out.println("");
