@@ -11,7 +11,7 @@ import java.util.LinkedList;
 //data structure
 class Graph{//private-package/default : package level access
 	int vertesSize;
-	LinkedList<Integer> adjLL[];
+	LinkedList<Integer>[] adjLL;
 	
 	@SuppressWarnings("unchecked")
 	public Graph(int size) {
