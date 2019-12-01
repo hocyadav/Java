@@ -46,6 +46,14 @@ class Queue{
 		}
 	}
 	
+	public int peek() {
+		if(frontOUT == rearIN) {
+			System.out.println("No element");
+			return -1;
+		}
+		return queue[frontOUT];
+	}
+	
 	public void print() {
 		System.out.print("Queue : ");
 		for(int i=0; i<rearIN; i++)
@@ -60,14 +68,26 @@ public class Queue_impl_array {
 		Queue obj = new Queue(4);
 		obj.print();
 		obj.enQ(10); obj.print();
+		
+		System.out.println("peek front : "+obj.peek());
+		
 		obj.enQ(20); obj.print();
 		obj.enQ(30); obj.print();
+		System.out.println("peek front : "+obj.peek());
+		
 		obj.enQ(40); obj.print();
 		obj.enQ(50); obj.print();
 		obj.deQ(); obj.print();
+		
 		obj.deQ(); obj.print();
+		System.out.println("peek front : "+obj.peek());
+		
 		obj.deQ(); obj.print();
+		System.out.println("peek front : "+obj.peek());
+		
 		obj.deQ(); obj.print();
+		System.out.println("peek front : "+obj.peek());
+		
 		obj.deQ(); obj.print();
 	}
 }
@@ -75,16 +95,22 @@ public class Queue_impl_array {
 
 Queue : 
 Queue : 10 
+peek front : 10
 Queue : 10 20 
 Queue : 10 20 30 
+peek front : 10
 Queue : 10 20 30 40 
 Overflow
 Queue : 10 20 30 40 
 Queue : 20 30 40 
 Queue : 30 40 
+peek front : 30
 Queue : 40 
+peek front : 40
 Queue : 
+No element
+peek front : -1
 Underflow - no data
 Queue : 
 
- */
+*/
