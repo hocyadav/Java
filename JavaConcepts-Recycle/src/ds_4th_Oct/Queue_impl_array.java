@@ -57,5 +57,16 @@ public class Queue_impl_array {
 		obj.enQ(3);obj.print();
 		obj.enQ(4);obj.print();
 		obj.enQ(1);obj.print();//overflow
+		obj.deQ(); obj.print();
 	}
 }
+/**
+Underflow - empty
+Queue : 1 
+Queue : 1 2 
+Queue : 1 2 3 
+Queue : 1 2 3 4 
+overflow
+Queue : 1 2 3 4 
+Queue : 2 3 4 
+ */
