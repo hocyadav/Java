@@ -25,8 +25,9 @@ class Graph{
 	
 	public void DFS(int vertex){
 		boolean[] visited = new boolean[vertexSize];
+		System.out.print("DFS start vertex "+vertex +" : ");
 		DFSUtil(vertex, visited);
-		
+		System.out.println();
 	}
 
 	private void DFSUtil(int vertex, boolean[] visited) {
@@ -62,5 +63,14 @@ public class Graph_impl_n_DFS_for_connected_graph {
 		
 		//call DFS - stack
 		obj.DFS(2);
+		obj.DFS(3);
+		obj.DFS(0);
 	}
 }
+/**
+
+DFS start vertex 2 : 2 0 1 3 
+DFS start vertex 3 : 3 
+DFS start vertex 0 : 0 1 2 3 
+
+ */
