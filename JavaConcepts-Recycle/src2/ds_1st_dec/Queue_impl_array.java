@@ -21,6 +21,10 @@ class Queue{
 		rearIN 		= 0;
 	}
 	
+	public boolean isEmpty() {
+		return (frontOUT == rearIN)?true:false;
+	}
+	
 	public void enQ(int v) {//IN : rear++
 		if(rearIN == size) {
 			System.out.println("Overflow");
