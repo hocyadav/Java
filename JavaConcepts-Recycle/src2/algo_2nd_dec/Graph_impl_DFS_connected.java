@@ -38,7 +38,7 @@ class Graph{
 		
 	}
 
-	private void DFSUtil(int givenVertex, boolean[] visited) {
+	protected void DFSUtil(int givenVertex, boolean[] visited) {//TODO: why protected required
 		//1. make visited -> true + print
 		//2. check connected vertex and if not visited call this method
 		
