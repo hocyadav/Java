@@ -2,6 +2,11 @@ package algo_2nd_dec;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+/**
+ * 
+ * @author Hariom Yadav | 02-Dec-2019
+ *
+ */
 
 //DS  - LinkedList<Integer>[]
 
@@ -63,3 +68,6 @@ public class Graph_impl_DFS_connected {
 		obj.DFS(2);
 	}
 }
+/**
+2 3 1 0 
+ */
