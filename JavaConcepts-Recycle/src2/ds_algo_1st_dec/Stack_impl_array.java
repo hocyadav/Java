@@ -1,4 +1,4 @@
-package ds_1st_dec;
+package ds_algo_1st_dec;
 
 /**
  * 
