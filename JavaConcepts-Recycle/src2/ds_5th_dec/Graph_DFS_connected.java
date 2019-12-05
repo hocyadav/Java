@@ -102,3 +102,9 @@ public class Graph_DFS_connected {
 	}
 	
 }
+/**
+ * 
+DFS : 1 0 2 3 
+DFS : 2 3 
+0 1 2 3 
+ */

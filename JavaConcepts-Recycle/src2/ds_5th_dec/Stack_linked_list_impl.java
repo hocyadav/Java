@@ -74,3 +74,20 @@ public class Stack_linked_list_impl {
 		
 	}
 }
+/**
+ * 
+true
+Underflow
+Stack : 
+Stack : 12 
+Stack : 13 12 
+Stack : 16 13 12 
+Stack : 1 16 13 12 
+Stack : 16 13 12 
+Stack : 13 12 
+Stack : 12 
+Stack : 
+Underflow
+Stack : 
+
+ */
