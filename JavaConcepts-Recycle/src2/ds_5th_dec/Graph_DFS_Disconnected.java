@@ -11,11 +11,11 @@ import java.util.List;
  */
 
 //ds
-class Graph{
+class GraphD{
 	int vertexSize;
 	List<Integer>[] adjVertex;
 	
-	public Graph(int s) {
+	public GraphD(int s) {
 		vertexSize = s;
 		adjVertex = new LinkedList[vertexSize];
 		
@@ -29,40 +29,21 @@ class Graph{
 		adjVertex[givenVertex].add(connectedvertex);
 		//adjVertex[givenVertex] --> this is one LL & we are adding data on this list
 	}
-	
-	public void DFS_ConnectedGraph(int startVertex) {
-		boolean[] visited = new boolean[vertexSize];
-		
-		System.out.print("DFS : ");
-		DFS_Util(startVertex, visited);
-		System.out.println();
-		
-	}
+
 	
 	public void DFS_DisconnectedGraph(int startVertex) {
 		boolean[] visited = new boolean[vertexSize];
 		
+		System.out.print("DFS : ");
+		
 		for(int i=0; i<vertexSize; i++) {
 			DFS_Util2(i, visited);
 		}
+		System.out.println();
 	}
 
-	private void DFS_Util(int givenVertex, boolean[] visited) {
-		//1. visited - true + print
-		//2. call not visited child - recursion
-		
-		visited[givenVertex] = true;
-		System.out.print(givenVertex+" ");
-		
-		Iterator<Integer> it = adjVertex[givenVertex].iterator();
-		while(it.hasNext()) {
-			int i = it.next();
-			if(visited[i] == false) {//non visited connected node
-				DFS_Util(i, visited);
-			}
-		}
-	}
 	
+	//same as DFSUtil connected --> update visited nod and print afte checking it is false(i.e. not visited)
 	private void DFS_Util2(int givenVertex, boolean[] visited) {
 		//1. visited - true + print
 		//2. call not visited child - recursion
@@ -75,7 +56,7 @@ class Graph{
 		while(it.hasNext()) {
 			int i = it.next();
 			if(visited[i] == false) {//non visited connected node
-				DFS_Util(i, visited);
+				DFS_Util2(i, visited);
 			}
 		}
 		
@@ -84,18 +65,14 @@ class Graph{
 	
 }
 
-public class Graph_DFS_connected {
+public class Graph_DFS_Disconnected {
 	public static void main(String[] args) {
-		Graph obj = new Graph(4);
+		GraphD obj = new GraphD(4);
 		
 		obj.addEdge(0, 1);
 		obj.addEdge(1, 0);
 		obj.addEdge(1, 2);
 		obj.addEdge(2, 3);
-		
-		obj.DFS_ConnectedGraph(1);
-		
-		obj.DFS_ConnectedGraph(2);
 		
 		obj.DFS_DisconnectedGraph(1);
 		
