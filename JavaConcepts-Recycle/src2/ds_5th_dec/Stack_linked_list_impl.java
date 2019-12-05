@@ -71,7 +71,6 @@ public class Stack_linked_list_impl {
 		obj.pop(); obj.print();
 		obj.pop(); obj.print();
 		obj.pop(); obj.print();
-		
 	}
 }
 /**
