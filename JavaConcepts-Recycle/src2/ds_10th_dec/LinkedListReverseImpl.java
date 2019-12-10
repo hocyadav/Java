@@ -1,31 +1,27 @@
 package ds_10th_dec;
-/**
- * 
- * @author Hariom Yadav | 10-Dec-2019
- *
- */
+
 
 //DS
-class Node{
+class Node2{
 	int data;
-	Node next;
+	Node2 next;
 	
-	public Node(int v){
+	public Node2(int v){
 		data = v;
 	}
 }
 
 //use of DS
-class LinkedL{
-	Node head;
+class LinkedL2{
+	Node2 head;
 	
 	public void insertAtLast(int v) {//
 		//1. 1st element
-		Node nn = new Node(v);
+		Node2 nn = new Node2(v);
 		if(head == null) {
 			head = nn;
 		}else {//2. already elem present
-			Node t = head;
+			Node2 t = head;
 			while(t.next != null)
 				t = t.next;
 			t.next = nn;
@@ -34,7 +30,7 @@ class LinkedL{
 	
 	public void insertAtFirst(int v) {
 		//1. 1st elem
-		Node nn = new Node(v);
+		Node2 nn = new Node2(v);
 		if(head == null)
 			head = nn;
 		else {
@@ -51,8 +47,8 @@ class LinkedL{
 			
 		}
 		else {
-			Node t = head;
-			Node x = t;
+			Node2 t = head;
+			Node2 x = t;
 			while(t.next != null) {
 				x = t;
 				t = t.next;
@@ -66,13 +62,13 @@ class LinkedL{
 		if(head == null)
 			return;
 		else {
-			Node t = head;
+			Node2 t = head;
 			head = t.next;
 		}
 	}
 	
 	public void print() {
-		Node t = head;
+		Node2 t = head;
 		System.out.print("LL : ");
 		while(t!=null) {
 			System.out.print(t.data+" ");
@@ -82,43 +78,42 @@ class LinkedL{
 	}
 	
 	
-}
-
-
-public class LinkedList {
-	public static void main(String[] args) {
-		LinkedL obj = new LinkedL();
-		obj.insertAtFirst(12); obj.print();
-		obj.insertAtFirst(13); obj.print();
+	public void reverseLL() {
+		Node2 t2 = head;
+		Node2 t1 = null, next;
 		
-		obj.insertAtLast(14); obj.print();
-		obj.insertAtLast(16); obj.print();
-		obj.insertAtLast(18); obj.print();
-		obj.insertAtLast(20); obj.print();
-		
-		obj.deleteFirst(); obj.print();
-		obj.deleteLast(); obj.print();
-		obj.deleteLast(); obj.print();
-		obj.deleteLast(); obj.print();
-		obj.deleteFirst(); obj.print();
-		obj.deleteFirst(); obj.print();
-		
+		while(t2 != null) {
+			next = t2.next;
+			t2.next = t1;
+			t1 = t2;
+			t2 = next;
+		}
+		head = t1;
 	}
+	
+	
 }
 
+
+
+
+public class LinkedListReverseImpl{
+	public static void main(String[] args) {
+		LinkedL2 obj = new LinkedL2();
+		obj.insertAtFirst(12); obj.print();
+		obj.insertAtFirst(11); obj.print();
+		obj.insertAtFirst(10); obj.print();
+		obj.insertAtFirst(1); obj.print();
+		
+		obj.reverseLL();obj.print();
+		
+	}	
+}
 /**
+ * 
 LL : 12 
-LL : 13 12 
-LL : 13 12 14 
-LL : 13 12 14 16 
-LL : 13 12 14 16 18 
-LL : 13 12 14 16 18 20 
-LL : 12 14 16 18 20 
-LL : 12 14 16 18 
-LL : 12 14 16 
-LL : 12 14 
-LL : 14 
-LL : 
-
-
-*/
+LL : 11 12 
+LL : 10 11 12 
+LL : 1 10 11 12 
+LL : 12 11 10 1 
+ */
