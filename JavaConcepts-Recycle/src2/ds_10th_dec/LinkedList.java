@@ -81,6 +81,12 @@ class LinkedL{
 		System.out.println();
 	}
 	
+	public void deleteNode(Node del) {
+		Node t = del;
+		del.data = t.data;
+		del.next = t.next;
+	}
+	
 	
 }
 
@@ -95,6 +101,7 @@ public class LinkedList {
 		obj.insertAtLast(16); obj.print();
 		obj.insertAtLast(18); obj.print();
 		obj.insertAtLast(20); obj.print();
+		//obj.deleteNode(del);
 		
 		obj.deleteFirst(); obj.print();
 		obj.deleteLast(); obj.print();
@@ -119,6 +126,4 @@ LL : 12 14 16
 LL : 12 14 
 LL : 14 
 LL : 
-
-
 */
