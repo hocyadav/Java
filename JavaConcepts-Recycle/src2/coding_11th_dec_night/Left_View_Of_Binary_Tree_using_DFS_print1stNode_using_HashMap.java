@@ -17,7 +17,7 @@ class BinaryTree{
 	
 	
 	public void leftView() {
-		rec_leftView(root,0);
+		storeEachLevelInHashMap(root,0);
 		
 		System.out.print("Left view of BT : ");
 		print1stValueFromLevelOrder();
@@ -39,7 +39,7 @@ class BinaryTree{
 	}
 
 
-	private void rec_leftView(Node root, int level) {
+	private void storeEachLevelInHashMap(Node root, int level) {
 		
 		if(root == null)
 			return;
@@ -55,8 +55,8 @@ class BinaryTree{
 		
 		map.put(level, listOfNodeAtEachLevel);
 		
-		rec_leftView(root.left, level+1);
-		rec_leftView(root.right, level+1);
+		storeEachLevelInHashMap(root.left, level+1);
+		storeEachLevelInHashMap(root.right, level+1);
 		
 	}
 	
