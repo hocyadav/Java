@@ -6,11 +6,11 @@ package ds_11th_dec;
  */
 
 //data structure for BST
-class Node{
+class Node2{
 	int data;
-	Node left, right;
+	Node2 left, right;
 	
-	public Node(int data) {
+	public Node2(int data) {
 		super();
 		this.data = data;
 	}
@@ -18,17 +18,17 @@ class Node{
 
 //use of data structure 
 class BST{
-	Node root;
+	Node2 root;
 	
 	public void search(int v) {
-		Node t = rec_search(root, v);
+		Node2 t = rec_search(root, v);
 		if(t != null)
 			System.out.println("Found "+v);
 		else
 			System.out.println("Not found "+v);
 	}
 	
-	private Node rec_search(Node root, int v) {
+	private Node2 rec_search(Node2 root, int v) {
 		if(root == null || root.data == v) 
 			return root;
 		else {
@@ -43,12 +43,12 @@ class BST{
 		root = rec_insert(root, v);
 	}
 
-	private Node rec_insert(Node root, int v) {
+	private Node2 rec_insert(Node2 root, int v) {
 		if(root == null) {
-			Node nn = new Node(v);
+			Node2 nn = new Node2(v);
 			root = nn;
 			return root;
-		}else {//update left and right node
+		}else {//update left and right Node2
 			if(v < root.data)
 				root.left = rec_insert(root.left, v);
 			else
@@ -61,7 +61,7 @@ class BST{
 		root = rec_del(root, v);
 	}
 
-	private Node rec_del(Node root, int v) {
+	private Node2 rec_del(Node2 root, int v) {
 		if(root == null)
 			return null;
 		else if(v < root.data)//element at left side 
@@ -80,7 +80,7 @@ class BST{
 				return root.left;
 			
 			//case 3: 2 child
-			Node t = minNode(root.right);//3.1.find min in left side
+			Node2 t = minNode(root.right);//3.1.find min in left side
 			root.data = t.data;//3.2.replace root data with min data
 				//3.3.delete that min value from right side
 			root.right = rec_del(root.right, t.data);
@@ -94,8 +94,8 @@ class BST{
 	 * @return
 	 */
 	
-	private Node minNode(Node right) {
-		Node t = right;
+	private Node2 minNode(Node2 right) {
+		Node2 t = right;
 		while(t.left != null)
 			t = t.left;
 		return t;
@@ -107,7 +107,7 @@ class BST{
 		System.out.println();
 	}
 
-	private void rec_inorder(Node root) {
+	private void rec_inorder(Node2 root) {
 		if(root == null)
 			return;
 		
