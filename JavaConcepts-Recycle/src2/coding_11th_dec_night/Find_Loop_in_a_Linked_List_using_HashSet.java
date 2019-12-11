@@ -20,7 +20,7 @@ class Node2{
 class LinkedList{
 	Node2 head;
 	
-	public void addFist(int v) {
+	public void addFirst(int v) {
 		Node2 nn = new Node2(v);
 		if(head == null)
 			head = nn;
@@ -30,7 +30,7 @@ class LinkedList{
 		}
 	}
 	
-	public boolean findLoopInLL() {
+	public boolean findLoopInLL_usingHashSet() {
 		//hashset : store one by one + check before storing
 		HashSet<Node2> hs = new HashSet<>();
 		Node2 t = head;
@@ -51,18 +51,18 @@ class LinkedList{
 public class Find_Loop_in_a_Linked_List_using_HashSet {
 	public static void main(String[] args) {
 		LinkedList obj = new LinkedList();
-		obj.addFist(20);
-		obj.addFist(40);
-		obj.addFist(15);
-		obj.addFist(10);
+		obj.addFirst(20);
+		obj.addFirst(40);
+		obj.addFirst(15);
+		obj.addFirst(10);
 		
-		boolean b = obj.findLoopInLL();
+		boolean b = obj.findLoopInLL_usingHashSet();
 		System.out.println(b);//false : loop not found
 		
 		//create loop for testing
 		obj.head.next.next.next.next = obj.head; 
 		
-		boolean b2 = obj.findLoopInLL();
+		boolean b2 = obj.findLoopInLL_usingHashSet();
 		System.out.println(b2);//true : loop not found
 	}
 }
