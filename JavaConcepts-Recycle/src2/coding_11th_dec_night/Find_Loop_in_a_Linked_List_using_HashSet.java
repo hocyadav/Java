@@ -1,6 +1,11 @@
 package coding_11th_dec_night;
 
 import java.util.HashSet;
+/**
+ * 
+ * @author Hariom Yadav | 11-Dec-2019
+ *
+ */
 
 class Node2{
 	int data;
@@ -43,7 +48,7 @@ class LinkedList{
 }
 
 
-public class Find_Loop_in_a_Linked_List {
+public class Find_Loop_in_a_Linked_List_using_HashSet {
 	public static void main(String[] args) {
 		LinkedList obj = new LinkedList();
 		obj.addFist(20);
