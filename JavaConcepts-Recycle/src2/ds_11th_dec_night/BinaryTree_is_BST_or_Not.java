@@ -36,6 +36,18 @@ class BST{
 		boolean right = rec_bstOrNot(root.right, root.data+1, max);
 		return left && right;
 	}
+	//my solution submitted for : amazon
+	public boolean rec_bstOrNot2(Node root, int min, int max) {
+		if(root == null)
+			return true;
+		if(root.data < min || root.data > max)
+			return false;
+		
+		boolean left = rec_bstOrNot(root.left, min, root.data);
+		boolean right = rec_bstOrNot(root.right, root.data, max);
+		return left && right;
+	}
+	
 }
 
 
@@ -48,10 +60,15 @@ public class BinaryTree_is_BST_or_Not {
 	        tree.root.left.left = new Node(1); 
 	        tree.root.left.right = new Node(3); 
 	        tree.TreeIsBstOrNot();
+	        
+	        //my method : 
+	        boolean b = tree.rec_bstOrNot2(tree.root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+	        System.out.println(b);
 	}
 }
 /**
 
-Tree is BST
+Binary Tree is BST
+true
 
 */
