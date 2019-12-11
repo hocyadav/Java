@@ -5,7 +5,6 @@ package linked_list_10th_dec_night;
  *
  */
 
-
 //ds
 class CircularLL{
 	
@@ -18,7 +17,6 @@ class CircularLL{
 		}
 	}
 	
-	
 	Node last;
 	
 	public void addEmpty(int v) {
@@ -26,13 +24,14 @@ class CircularLL{
 	}
 
 	private Node rec_addEmpty(Node last, int v) {
-		if(last != null) return last;
+		if(last != null)
+			return last;//coz this method is only for add into empty list
 		
-		Node nn = new Node(v);
-		
+		Node nn = new Node(v);//1. create new node
+		//2. make connection
 		last = nn;
 		last.next = last;
-		
+		//3. return updated head last node
 		return last;
 	}
 	
@@ -44,51 +43,71 @@ class CircularLL{
 		if(last == null)
 			return rec_addEmpty(last, v);
 		
-		Node nn = new Node(v);
-		//connection
+		Node nn = new Node(v);//1. new node
+		//2. connection
 		nn.next = last.next;
 		last.next = nn;
-		
+		//3. return updated head last node
 		return last;
 	}
 	
 	public void addLast(int v) {
 		last = rec_addLast(last, v);
 	}
-
+	/**
+	 * same as addFirst + move last to newly added node
+	 * @param last
+	 * @param v
+	 * @return
+	 */
 	private Node rec_addLast(Node last, int v) {
 		if(last == null)
 			return rec_addEmpty(last, v);
 		
-		Node nn = new Node(v);
+		Node nn = new Node(v);//1. new node
+		//2. make connection
 		nn.next = last.next;
 		last.next = nn;
+		//move last node to newly added node
 		last = nn;
+		//3. return updated head last node
 		return last;
 	}
 	
 	public void addAfter(int p, int v) {
 		last = rec_addAfter(last, p, v);
 	}
-	
+	/**
+	 * Traverse through all node
+	 * @param last
+	 * @param p
+	 * @param v
+	 * @return
+	 */
 	private Node rec_addAfter(Node last, int p, int v) {
-		if(last == null)
+		if(last == null)//not a CLL
 			return null;
 		
-		Node nn = new Node(v);
-		
 		Node pnode = last.next;
+		
 		do {
+			
 			if(pnode.data == p) {//found : add + return
+				Node nn = new Node(v);//1. new node
+				//2. make connection
 				nn.next = pnode.next;
 				pnode.next = nn;
-				
+				//3. if last node is key then move last node to newly added node
 				if(pnode == last)
 					last = pnode;
+				//4. return updated node
 				return last;
-			}else
+				
+			}else {
 				pnode = pnode.next;
-		}while(pnode != last);
+			}
+			
+		}while(pnode != last.next);//comparing starting point , starting point is p = last.next
 		
 		return last;
 	}
@@ -110,6 +129,16 @@ class CircularLL{
 		System.out.println();
 	}
 	
+	public void traversePrint() {
+		Node t = last.next;
+		System.out.print("CLL : ");
+		do {
+			System.out.print(t.data+" ");
+			t = t.next;
+		}while(t != last.next);
+		
+	}
+	
 	
 }
 
@@ -123,6 +152,17 @@ public class CircularLinkedList {
 		obj.addFirst(2);obj.print();
 		obj.addLast(4);obj.print();
 		obj.addAfter(1, 34); obj.print();
+		obj.traversePrint();
 		
 	}
 }
+/**
+CLL : 
+CLL : 9
+CLL : 1 9
+CLL : 2 1 9
+CLL : 2 1 9 4
+CLL : 2 1 34 9 4
+CLL : 2 1 34 9 4 
+
+*/
