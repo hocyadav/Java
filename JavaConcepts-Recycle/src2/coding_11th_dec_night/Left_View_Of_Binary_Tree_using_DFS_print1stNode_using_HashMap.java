@@ -21,9 +21,7 @@ class BinaryTree{
 		
 		System.out.print("Left view of BT : ");
 		print1stValueFromLevelOrder();
-		
 	}
-
 
 	private void print1stValueFromLevelOrder() {
 		
@@ -31,13 +29,12 @@ class BinaryTree{
 		
 		while(it.hasNext()) {
 			Map.Entry mm = (Map.Entry)it.next();//get entry obj
-			List<Node> l = (List<Node>) mm.getValue();
+			List<Node> l = (List<Node>) mm.getValue();//type cast value
 			//System.out.println(l);
 			System.out.print(l.get(0).data +" ");
 		}
 		
 	}
-
 
 	private void storeEachLevelInHashMap(Node root, int level) {
 		
@@ -60,10 +57,7 @@ class BinaryTree{
 		
 	}
 	
-	
-	
 }
-
 
 public class Left_View_Of_Binary_Tree_using_DFS_print1stNode_using_HashMap {
 	public static void main(String[] args) {
@@ -80,7 +74,6 @@ public class Left_View_Of_Binary_Tree_using_DFS_print1stNode_using_HashMap {
 		
 		obj.leftView();
 		//System.out.println(obj.map);
-		
 	}
 }
 /**
