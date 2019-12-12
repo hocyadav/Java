@@ -9,7 +9,7 @@ import java.util.Stack;
 
 class LinkedList_P{
 	Node2 head;
-	Stack<Node2> stack = new Stack<Node2>();
+	Stack<Integer> stack = new Stack<Integer>();
 	
 	public void addFirstPlace(int v) {
 		Node2 nn = new Node2(v);
@@ -23,30 +23,29 @@ class LinkedList_P{
 	
 	public void checkPalindromeLL() {
 		storeInStack();
+		
 		Node2 t = head;
-		while(t != null) {//TODO : not working
-			if(t != stack.peek()) {
-				System.out.println("Not a palindrom");
-				return;
-			}else {
-				stack.pop();//delete from stack
+		
+		while(t != null) {//TODO : not working -> done change stack to integer from Node type
+			int x = stack.pop();
+			if(t.data == x) {
+				System.out.println("palindrom");
 				t = t.next;
+			}else {
+				System.out.println("Not a palindrome");
+				return;
 			}
 		}
 	}
 
 	private void storeInStack() {
-		//stack
-		//Stack<Node2> stack = new Stack<Node2>();
-		//put all LL into stack
 		Node2 t = head;
+		
 		while(t != null) {
-			stack.push(t);
+			stack.push(t.data);
 			t = t.next;
 		}
-				
-		System.out.println(stack);
-				
+		//System.out.println(stack);
 	}
 	
 }
@@ -56,9 +55,16 @@ public class Linked_List_is_Palindrome_orNot_usingStack {
 		LinkedList_P obj = new LinkedList_P();
 		obj.addFirstPlace(1);
 		obj.addFirstPlace(2);
+		obj.addFirstPlace(2);
 		obj.addFirstPlace(1);
-		//obj.addFirst(1);
 		obj.checkPalindromeLL();
 		
 	}
 }
+/*
+palindrom
+palindrom
+palindrom
+palindrom
+
+*/
