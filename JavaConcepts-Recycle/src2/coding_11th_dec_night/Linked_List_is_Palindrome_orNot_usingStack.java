@@ -4,7 +4,7 @@ import java.util.Stack;
 /**
  * 
  * @author Hariom Yadav | 11-Dec-2019
- *
+ * https://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/
  */
 
 class LinkedList_P{
