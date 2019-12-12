@@ -96,8 +96,16 @@ public class PriorityQueue_all_methods {
 	}
 }
 /**
-PQ1 obj : [1, 2, 12, 15, 6]
-1 2 6 12 15 
-PQ2 obj : [15, 12, 2, 6, 1]
-15 12 6 2 1 
+pq : [2, 10]
+pq2 : [aa, om, hari]
+pq3 : [om, hari, aa]
+[priority_queue_comparable_comparator_18th_nov.Student1@7852e922, priority_queue_comparable_comparator_18th_nov.Student1@4e25154f, priority_queue_comparable_comparator_18th_nov.Student1@70dea4e]
+pq5 : [priority_queue_comparable_comparator_18th_nov.Student2@65ab7765, priority_queue_comparable_comparator_18th_nov.Student2@1b28cdfa, priority_queue_comparable_comparator_18th_nov.Student2@eed1f14]
+PQ5 : hari aa om 
+List l1 :[12, 23, 2, 5]
+pq6 : [2, 5, 12, 23]
+pq7 : [23, 12, 5, 2]
+pq8 : [2, 5, 12, 23]
+Object arary : [Ljava.lang.Object;@7229724f
+Array : 2 5 12 23 
 */
