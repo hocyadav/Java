@@ -35,16 +35,16 @@ class LinkedList{
 		HashSet<Node2> hs = new HashSet<>();
 		Node2 t = head;
 		while(t != null) {//traverse list
-			if(hs.contains(t)) {
+			
+			if(hs.contains(t))
 				return true;
-			}
-			hs.add(t);
+			else
+				hs.add(t);
+			
 			t = t.next;
 		}
 		return false;
 	}
-
-	
 }
 
 
