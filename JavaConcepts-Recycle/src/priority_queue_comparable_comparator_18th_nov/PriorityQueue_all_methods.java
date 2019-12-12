@@ -95,3 +95,9 @@ public class PriorityQueue_all_methods {
 
 	}
 }
+/**
+PQ1 obj : [1, 2, 12, 15, 6]
+1 2 6 12 15 
+PQ2 obj : [15, 12, 2, 6, 1]
+15 12 6 2 1 
+*/
