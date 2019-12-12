@@ -9,6 +9,7 @@ import java.util.Map;
  * 
  * @author Hariom Yadav | 11-Dec-2019
  * https://www.geeksforgeeks.org/print-left-view-binary-tree/
+ * level order traversal and print 1st element
  */
 
 class BinaryTree{
