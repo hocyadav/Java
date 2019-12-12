@@ -1,6 +1,11 @@
 package coding_11th_dec_night;
 
 import java.util.Stack;
+/**
+ * 
+ * @author Hariom Yadav | 11-Dec-2019
+ *
+ */
 
 class LinkedList_P{
 	Node2 head;
@@ -19,7 +24,7 @@ class LinkedList_P{
 	public void checkPalindromeLL() {
 		storeInStack();
 		Node2 t = head;
-		while(t != null) {
+		while(t != null) {//TODO : not working
 			if(t != stack.peek()) {
 				System.out.println("Not a palindrom");
 				return;
@@ -46,7 +51,6 @@ class LinkedList_P{
 	
 }
 
-
 public class Linked_List_is_Palindrome_orNot_usingStack {
 	public static void main(String[] args) {
 		LinkedList_P obj = new LinkedList_P();
@@ -55,8 +59,6 @@ public class Linked_List_is_Palindrome_orNot_usingStack {
 		obj.addFirstPlace(1);
 		//obj.addFirst(1);
 		obj.checkPalindromeLL();
-		
-		
 		
 	}
 }
