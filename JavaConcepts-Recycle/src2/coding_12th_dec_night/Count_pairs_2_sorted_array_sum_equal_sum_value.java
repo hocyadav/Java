@@ -8,7 +8,6 @@ import java.util.HashSet;
  * @author Hariom Yadav | 12-Dec-2019
  *
  */
-
 public class Count_pairs_2_sorted_array_sum_equal_sum_value {
 	public static void main(String[] args) {
 		int arr1[] = {3,1,5,7};
