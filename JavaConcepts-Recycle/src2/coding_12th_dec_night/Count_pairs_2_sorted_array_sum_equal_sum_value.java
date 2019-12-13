@@ -39,7 +39,10 @@ public class Count_pairs_2_sorted_array_sum_equal_sum_value {
 		for(int i=0; i<arr1.length ; i++) {
 			int x = sum - arr1[i];
 			
-			if(searchBinarySearchIterative(arr2, 0, arr2.length-1, x)) {
+//			if(searchBinarySearchIterative(arr2, 0, arr2.length-1, x)) {
+//				count++;
+//			}
+			if(searchBinarySearchRecursive(arr2, 0, arr2.length-1, x)) {
 				count++;
 			}
 		}
@@ -62,22 +65,16 @@ public class Count_pairs_2_sorted_array_sum_equal_sum_value {
 
 	private static boolean searchBinarySearchRecursive(int[] arr2, int left, int right, int x) {
 		//find mid
-		if(left > right)
+		if(left > right)//base case
 			return false;
-		if(left == right) {
-			if(arr2[left] == x)
-				return true;
-			else
-				return false;
-		}else {
-			int mid = (right + left)/2;
-			
+		else {//rec case
+			int mid = (left + right)/2;
 			if(arr2[mid] == x)
 				return true;
-			else if(arr2[mid] < x)
-				return searchBinarySearchRecursive(arr2, left, mid-1, x);
-			else
+			else if(x > arr2[mid])
 				return searchBinarySearchRecursive(arr2, mid+1, right, x);
+			else
+				return searchBinarySearchRecursive(arr2, left, mid-1, x);
 		
 		}
 	}
