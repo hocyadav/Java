@@ -8,12 +8,9 @@ public class Student_2 {
 	String name;
 	int roll;
 	
-	
 	public Student_2(String name, int roll) {
 		super();
 		this.name = name;
 		this.roll = roll;
 	}
-	
-	
 }

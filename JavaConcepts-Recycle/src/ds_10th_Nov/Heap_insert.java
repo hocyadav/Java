@@ -38,7 +38,8 @@ public class Heap_insert {
 		System.out.println();
 		 
 	}
-	
+	//1 simply add
+	//2. find non leaf node and call heapify
 	private static void insert(Vector<Integer> vectorObj, int key) {
 		vectorObj.add(key);
 		
@@ -58,6 +59,7 @@ public class Heap_insert {
 		int largest	= index;
 		int left	= index*2 +1;
 		int right 	= index*2 +2;
+		//for parent node = (index - 1) /2;
 		
 		//find largest value index
 		if(left < size && vectorObj.elementAt(left) > vectorObj.elementAt(largest))

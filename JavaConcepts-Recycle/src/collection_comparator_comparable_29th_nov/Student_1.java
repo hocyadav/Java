@@ -20,11 +20,11 @@ public class Student_1 implements Comparator<Student_1>{//comparator required im
 		this.roll = roll;
 	}
 
-
-
 	public int compare(Student_1 o1, Student_1 o2) {
-		if(o1.roll > o2.roll) return 1;
-		else if(o1.roll < o2.roll) return -1; 
+		if(o1.roll > o2.roll) 
+			return 1;
+		else if(o1.roll < o2.roll) 
+			return -1; 
 		return 0;
 	}
 }

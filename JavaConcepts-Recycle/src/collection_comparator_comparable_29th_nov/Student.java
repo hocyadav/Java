@@ -8,7 +8,7 @@ public class Student implements Comparable<Student>{//comparable not required an
 	String st_name;
 	int rollno;
 	
-	public int compareTo(Student o) {
+	public int compareTo(Student o) {//sorting logic : Student type objects
 		if(this.rollno > o.rollno) return 1;
 		else if(this.rollno < o.rollno) return -1;
 		return 0;

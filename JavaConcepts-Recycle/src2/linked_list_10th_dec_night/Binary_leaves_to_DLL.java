@@ -39,7 +39,7 @@ class BinaryTree{
 		rec_inorder(root.right);
 	}
 	
-	public void binaryTreeLeavesDLL() {
+	public void binaryTreeLeavesToDLL() {
 		root = rec_binaryTreeLeavesToDLL(root);//root will update only in case of single node
 	}
 	/**
@@ -98,7 +98,7 @@ public class Binary_leaves_to_DLL {
         obj.root.right.right.right = new Node(10); 
         obj.printInorder();
 		
-		obj.binaryTreeLeavesDLL(); obj.printDLL();
+		obj.binaryTreeLeavesToDLL(); obj.printDLL();
 		obj.printInorder();
 		
 		

@@ -38,13 +38,11 @@ public class TestComparator_Student_2 {
 			}
 		};
 		
-		//soring based on my logic
+		//soring based on my logic : logic store in comparator object --> obj
 		Collections.sort(listOfStudents, obj);//this will take list + new comparator obj
 		
 		System.out.print("Sorted list : ");
 		print(listOfStudents);
-		
-		
 	}
 	
 	public static void print(LinkedList<Student_2> list) {

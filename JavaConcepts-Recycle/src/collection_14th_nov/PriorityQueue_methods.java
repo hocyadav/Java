@@ -30,7 +30,7 @@ public class PriorityQueue_methods {
 		System.out.println("PQ - sysout bt not in order : "+pq);
 		
 		//2. PriorityQueue(Collection<E> c)
-		//reates a PriorityQueue containing the elements in the specified collection.
+		//creates a PriorityQueue containing the elements in the specified collection.
 		ArrayList<Integer> ar = new ArrayList<Integer>();
 		ar.add(12); ar.add(23); ar.add(34); ar.add(3);
 		System.out.println(ar);
@@ -39,19 +39,20 @@ public class PriorityQueue_methods {
 		
 		System.out.print("PQ2 : ");
 		while(!pq2.isEmpty())
-			System.out.print(pq2.poll()+" ");
+			System.out.print(pq2.poll()+" ");//deleting pq2 data
 		System.out.println();
 		//all PQ data deleted
-		pq2.addAll(ar);//add again 
+		pq2.addAll(ar);//add again
+		System.out.println(pq2.size());
 		
 		//3. PriorityQueue(int initialCapacity)
 		PriorityQueue<Integer> pq3 = new PriorityQueue<Integer>(3);//initial capacity 3 this is capacity not size - 
 		//but later size will increase dynamically
-		System.out.println("size : "+pq3.size());
+		System.out.println("size pq3: "+pq3.size());
 		
 		pq3.add(12); pq3.add(3); pq3.add(34); pq3.add(45);
 		pq3.addAll(ar);
-		System.out.println("size : "+pq3.size());
+		System.out.println("size pq3 after adding ar collection : "+pq3.size());
 		System.out.print("PQ3 (some addition + addAll arrayList collection): ");
 		while(!pq3.isEmpty())
 			System.out.print(pq3.poll()+" ");
@@ -61,7 +62,7 @@ public class PriorityQueue_methods {
 		//Creates a PriorityQueue with the specified initial capacity that orders its elements 
 		//according to the specified comparator
 		
-		PriorityQueue<Std> pq4 = new PriorityQueue<Std>(4, new Std());//capacity + class obj that contain comparator interace unimplemented method
+		PriorityQueue<Std> pq4 = new PriorityQueue<Std>(4, new Std());//capacity + class obj that contain comparator interface unimplemented method
 		
 		
 		//5. PriorityQueue(PriorityQueue<E> c)
@@ -74,7 +75,7 @@ public class PriorityQueue_methods {
 		
 		PriorityQueue<Integer> pq6 = new PriorityQueue<Integer>(Collections.reverseOrder());
 		pq6.addAll(pq2);
-		//convert PQ to Array (array will store as Object not as Integer , so type cast)
+		//convert PQ to Array (array will store as Object not as Integer , so type cast when required)
 		Object[] arrObj = pq6.toArray();
 		System.out.print("PQ6 to Array Object to Integer : ");
 		for(int i=0; i<arrObj.length ; i++) {

@@ -22,6 +22,7 @@ class LinkedList_P{
 	}
 	
 	public void checkPalindromeLL() {
+		
 		storeInStack();
 		
 		Node2 t = head;
@@ -29,7 +30,7 @@ class LinkedList_P{
 		while(t != null) {//TODO : not working -> done change stack to integer from Node type
 			int x = stack.pop();
 			if(t.data == x) {
-				System.out.println("palindrom");
+				System.out.println("palindrom "+t.data);
 				t = t.next;
 			}else {
 				System.out.println("Not a palindrome");
@@ -48,6 +49,16 @@ class LinkedList_P{
 		//System.out.println(stack);
 	}
 	
+	public void printLL() {
+		Node2 t = head;
+		System.out.print("List : ");
+		while(t != null) {
+			System.out.print(t.data+" ");
+			t = t.next;
+		}
+		System.out.println();
+	}
+	
 }
 
 public class Linked_List_is_Palindrome_orNot_usingStack {
@@ -56,7 +67,7 @@ public class Linked_List_is_Palindrome_orNot_usingStack {
 		obj.addFirstPlace(1);
 		obj.addFirstPlace(2);
 		obj.addFirstPlace(2);
-		obj.addFirstPlace(1);
+		obj.addFirstPlace(1);obj.printLL();
 		obj.checkPalindromeLL();
 		
 	}

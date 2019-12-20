@@ -7,11 +7,18 @@ import java.util.LinkedList;
 /**
  * 
  * @author Hariom Yadav - Nov 22, 2019
+ *	
+ * if (Not present in HashSet)
+ * 		if HashSet size full -> free space + add
+ * 		else 			     -> add
+ * else Present in HashSet
+ * 		Find(iterator) position in Deque LinkedList + remove
+ * 		addFirst that element in Queue + add in HashSet
  *
  */
 class LruCache{
 	//two data structure --> deque + hash set
-	//deque --> for cache
+	//deque Linked list --> for cache
 	//hash set --> check key present in deque or not (coz searching in dequeu is n time)
 	
 	//know something
@@ -50,6 +57,7 @@ class LruCache{
 			set.add(key);//not required since else block here means already present in set - we can cross verify
 		}
 	}
+	
 	/**
 	 * print content of LRU Cache
 	 */

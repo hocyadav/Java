@@ -16,14 +16,17 @@ public class Heap_BuildHeap_heapifyMin_Max_Delete {
 		
 		buildHeap(arr, len);
 		
-		for(int i:arr)
+		for(int i:arr)//not sorted : only root is greater
 			System.out.print(i+" ");
-		int key = 12;
 		System.out.println();
-		System.out.println("len :"+ len);
-		len = deleteRootNode(arr, len, key);//or call as delete 1st index node from array
-		System.out.println("len :"+ len);
 		
+		int deleteValue = 12;//we cant delete any value from heap : only root is deleted i.e. min or max
+		System.out.println("old len before delete :"+ len);
+		
+		len = deleteRootNode(arr, len);//or call as delete 1st index node from array
+		System.out.println("new len after delete  :"+ len);
+		
+		System.out.print("Top element deleted : ");
 		for(int i=0; i<len; i++)
 			System.out.print(arr[i]+" ");
 		
@@ -33,17 +36,16 @@ public class Heap_BuildHeap_heapifyMin_Max_Delete {
 		for(int i=0; i<len; i++)
 			System.out.print(arr[i]+" ");
 		
-		
-		
 	}
+	
 	/**
 	 * Delete 1st index from array (heap array) and then internally call heapify to make heap array
+	 * //we cant delete any value from heap : only root is deleted i.e. min or max
 	 * @param arr 
 	 * @param len 
-	 * @param key 
 	 * @return
 	 */
-	private static int deleteRootNode(int[] arr,int len, int key) {
+	private static int deleteRootNode(int[] arr,int len) {
 
 		//1 swap with last index value
 		arr[0] = arr[len - 1];//len - 1 will give 1st index
@@ -88,6 +90,7 @@ public class Heap_BuildHeap_heapifyMin_Max_Delete {
 		int largest = index;
 		int left = index*2 + 1;
 		int right = index*2 +2;
+		//parent node : (i-1)/2
 		
 		//find largest value index
 		if(left < len && arr[left] > arr[largest])//largest update

@@ -68,7 +68,7 @@ class BST{
 		//take treemap that will be sorted
 		TreeMap<Integer, Vector<Integer>> hmap = new TreeMap<>();
 		//call inorder and save in this hmap
-		int distance = 0;//root as 0 distance , move left and -1, riht +1
+		int distance = 0;//root as 0 distance , move left and -1, right +1
 		//verticalUtility(root, hmap, hmap.size(), distance);
 		//verticalUtility(root, hmap, distance, hmap.size());
 		verticalUtility(root, hmap, distance);
@@ -103,11 +103,10 @@ class BST{
 		hmap.put(distance, arrLL);//distance = 0 : mapped with arraylist that contain all node that have distance 0
 
 		//now call left side
-		
 		verticalUtility(root.left, hmap, distance-1);
+		
 		//now call right side
 		verticalUtility(root.right, hmap, distance+1);
-		
 	}
 	
 }

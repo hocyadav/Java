@@ -6,9 +6,8 @@ class Node{
 	int data;
 	Node left, right;
 	
-	public Node(){
-		
-	}
+	public Node(){}
+	
 	public Node(int x){
 		data = x;
 	}
@@ -21,10 +20,10 @@ class Bst{
 	public Node balanceTree(Node root) {
 		//store nodes in dynamic array
 		Vector<Node> vnode =  new Vector<>();
-		storeBstNode(root, vnode);//store in vector by calling modified in-order
+		storeBstInorderInVector(root, vnode);//store in vector by calling modified in-order
 		
 		//get nodes and create tree
-		return buildTreeUtil(vnode, 0, vnode.size());
+		return buildTreeUtil(vnode, 0, vnode.size()-1);
 		
 		
 	}
@@ -33,27 +32,39 @@ class Bst{
 		if(start > end) 
 			return null;
 		else {
-			int mid = (start + end)/2;
-			Node node = vnode.get(mid);
+			int mid = (start + end)/2;//get mid index
+			Node node = vnode.get(mid);//get mid value
 			
-			node.left = buildTreeUtil(vnode, start, mid-1);
-			node.right = buildTreeUtil(vnode, mid+1, end);
+			node.left = buildTreeUtil(vnode, start, mid-1);//recursion - update left root
+			node.right = buildTreeUtil(vnode, mid+1, end);//recursion - update right root
 			
 			return node;
 		}
 	}
 
-	private void storeBstNode(Node root, Vector<Node> vnode) {
-		if(root == null) return;
+	private void storeBstInorderInVector(Node root, Vector<Node> vnode) {
+		if(root == null) 
+			return;
 		else {
-			storeBstNode(root.left, vnode);
+			storeBstInorderInVector(root.left, vnode);
 			vnode.add(root);//adding all root node in dynamic array
-			storeBstNode(root.right, vnode);
+			storeBstInorderInVector(root.right, vnode);
 		}
 	}
 	
-}
+	public void print() {
+		rec_inorder(root);
+	}
 
+	private void rec_inorder(Node root) {
+		if(root == null)
+			return;
+		rec_inorder(root.left);
+		System.out.println(root.data+" ");
+		rec_inorder(root.right);
+	}
+	
+}
 
 
 public class BST_balance {
@@ -67,6 +78,8 @@ public class BST_balance {
 		obj.root.left.left.left.left.left = new Node(2);
 		
 		obj.balanceTree(obj.root);
+		
+		obj.print();
 		
 		
 	}

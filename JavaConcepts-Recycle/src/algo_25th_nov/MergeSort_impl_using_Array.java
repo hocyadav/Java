@@ -24,12 +24,13 @@ public class MergeSort_impl_using_Array {
 	}
 
 	private static void mergeSort(int[] arr, int start, int end) {//find min, call recursive left right, merger both 
-		if(start >= end) return;
+		if(start >= end)//return when arary become single value 
+			return;
 		else {
 			int mid = (start+end)/2;
-			mergeSort(arr, start, mid);
-			mergeSort(arr, mid+1, end);
-			mergeTwoSortedArray(arr, start, mid, end);
+			mergeSort(arr, start, mid);//1st sorted arry
+			mergeSort(arr, mid+1, end);//2nd sorted arry
+			mergeTwoSortedArray(arr, start, mid, end);//merge 2 sorted array
 		}
 	}
 
