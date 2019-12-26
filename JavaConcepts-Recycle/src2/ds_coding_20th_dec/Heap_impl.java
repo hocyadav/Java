@@ -44,7 +44,7 @@ public class Heap_impl {
 		//1. non leaf node
 		//2. for loop -> heapify
 		
-		int nn = length/2;
+		int nn = length/2 - 1;
 		for(int i = nn; i >= 0; i--)
 			heapify(arr,length,i);
 	}
