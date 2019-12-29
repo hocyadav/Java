@@ -1,6 +1,11 @@
 package ds_29th_dec_night;
 
 import java.util.Iterator;
+/**
+ * 
+ * @author Hariom Yadav | 29-Dec-2019
+ *
+ */
 
 class GraphDFS extends Graph{//extending graph impl and adding dfs method
 
