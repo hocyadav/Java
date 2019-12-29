@@ -7,7 +7,7 @@ import java.util.LinkedList;
  *
  */
 
-class Graph{
+class Graph{//this is minimum basic impl of graph 
 	int vsize;
 	LinkedList<Integer> adjList[];
 	
