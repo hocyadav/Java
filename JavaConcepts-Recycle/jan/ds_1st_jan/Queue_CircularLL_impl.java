@@ -4,7 +4,6 @@ package ds_1st_jan;
  * @author Hariom Yadav | 01-Jan-2020
  *
  */
-
 class Node{
 	int data;
 	Node next;
