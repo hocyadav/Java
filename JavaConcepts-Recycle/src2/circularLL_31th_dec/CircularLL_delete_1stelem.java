@@ -29,7 +29,7 @@ class CLL_delete extends CLL_add_print{
 	}
 }
 
-public class CircularLL_delete_1st {
+public class CircularLL_delete_1stelem {
 	public static void main(String[] args) {
 		CLL_delete obj = new CLL_delete();
 		obj.add(12); obj.print();
