@@ -19,7 +19,6 @@ class CLL_insert{
 	public void add_NULL(int k) {
 		if(last != null)//this method is only for when last is null
 			return;
-		
 		Node nn = new Node(k);
 		last = nn;
 		last.next = last;//loop 
@@ -62,14 +61,8 @@ class CLL_insert{
 			return;
 		}
 		Node nn = new Node(k);
-		
 		//find item + then add + then check if find position is last then move last
 		Node t = last.next;//first element in CLL
-		
-//		if(t == last) {
-//			add_END(k);
-//			return;
-//		}
 		
 		do {
 			if(t.data == item) {//while traversing if we found ele then add + return
@@ -81,8 +74,8 @@ class CLL_insert{
 				
 				return;
 			}
-			
 			t = t.next;
+			
 		}while(t != last.next);
 		
 	}
@@ -128,9 +121,7 @@ class CLL_insert{
 			
 		}
 		System.out.println();
-		
 	}
-	
 }
 
 public class CircularLL_insert {
