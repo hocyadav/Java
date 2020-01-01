@@ -4,30 +4,30 @@ package circularLL_31th_dec;
  * @author Hariom Yadav | 31-Dec-2019
  *
  */
-class Node{
+class NodeQ{
 	int data;
-	Node next;//this is fear
-	Node rear;
+	NodeQ next;//this is fear
+	NodeQ rear;
 	
-	public Node(int d) {
+	public NodeQ(int d) {
 		data = d;
 	}
 }
 
 class QueueL{
-	Node head;
+	NodeQ head;
 	
 	public void enQ(int k) {
 		insert_in_LL_Last(k);
 	}
 
 	private void insert_in_LL_Last(int k) {
-		Node nn = new Node(k);
+		NodeQ nn = new NodeQ(k);
 		if(head == null) {
 			head = nn;
 			return;
 		}
-		Node t = head;
+		NodeQ t = head;
 		while(t.next != null)
 			t = t.next;
 		t.next = nn;
@@ -51,7 +51,7 @@ class QueueL{
 	}
 	
 	public void print() {
-		Node t = head;
+		NodeQ t = head;
 		System.out.print("Queue : ");
 		while(t!= null) {
 			System.out.print(t.data +" ");
