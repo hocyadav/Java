@@ -20,10 +20,6 @@ class Graph{
 			adjList[i] = new LinkedList<Integer>();
 	}
 	
-	public void addEdge(int src, int dest) {
-		adjList[src].add(dest);
-	}
-	
 	public void printAdjList() {
 		for(int i=0; i<adjList.length; i++) {
 			System.out.print(i+" -> ");
@@ -55,8 +51,9 @@ class Graph{
 		Iterator<Integer> it = adjList[vertex].iterator();
 		while(it.hasNext()) {
 			int val = it.next();
-			if(visited[val] == false)//not visited
+			if(visited[val] == false){//only for not visited
 				rec_dfs(val, visited);
+			}
 		}
 	}
 	
@@ -69,6 +66,7 @@ public class Leetcode_tower_hopping {
 		Graph obj = new Graph(graphLen);
 		obj.printAdjList();
 		System.out.println("-------------");
+		//convert array into adj list graph
 		for(int i=0; i < arr.length; i++) {
 			if(arr[i] != 0) {
 				for(int j=i; j < Math.min(arr.length, i+arr[i]) ; j++) {
@@ -76,19 +74,21 @@ public class Leetcode_tower_hopping {
 				}
 			}
 		}
+		
 		obj.printAdjList();
 		obj.dfs(0);
-		obj.dfs(1);
-		obj.dfs(2);
-		obj.dfs(3);
-		obj.dfs(4);
-		obj.dfs(5);
-		obj.dfs(6);
+//		obj.dfs(1);
+//		obj.dfs(2);
+//		obj.dfs(3);
+//		obj.dfs(4);
+//		obj.dfs(5);
+//		obj.dfs(6);
 		
 	}
 
 }
 /**
+
 0 -> 
 1 -> 
 2 -> 
@@ -106,16 +106,5 @@ public class Leetcode_tower_hopping {
 6 -> 
 0 1 2 3 4 5 6 
 reached vertex 6
-1 2 3 
-Not reached vertex 6
-2 
-Not reached vertex 6
-3 
-Not reached vertex 6
-4 5 6 
-reached vertex 6
-5 
-Not reached vertex 6
-6 
-reached vertex 6
+
 */
