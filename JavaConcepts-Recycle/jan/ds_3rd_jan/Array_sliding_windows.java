@@ -17,14 +17,15 @@ public class Array_sliding_windows {
 
 	//TC : n
 	private static int fun2(int[] arr, int length, int k) {
+		//1. find k value and store
 		int localMax = 0;
 		for(int i=0; i<k; i++)
 			localMax += arr[i];
-		
+		//2. for loop after k +nextVale -privious1stValueInPriviousWindow
 		int currentMax = localMax;
 		for(int j=k; j<length; j++) {
 			currentMax += arr[j] - arr[j-k];
-			localMax = Math.max(localMax, currentMax);
+			localMax = Math.max(localMax, currentMax);//this line is combination of IF + assignment
 		}
 		return localMax;
 	}
