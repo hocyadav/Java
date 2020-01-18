@@ -21,6 +21,10 @@ public class PriorityQueue_SortedSet {
 		list.add(22);
 		list.add(2);
 		System.out.println(list);
+		
+		Collections.reverse(list);//it will reverse the list
+		System.out.println("reverse : "+list);
+		
 		Collections.sort(list);//this will sort only primitive data type - https://www.youtube.com/watch?v=oAp4GYprVHM
 		//sort will only take that obj of class that has implemented Comparable interface
 		//since Integer, String all these primitive wrapper class has implemented this interface and internally written unimplemented class
@@ -38,7 +42,7 @@ public class PriorityQueue_SortedSet {
 		
 		sList.add(o1); sList.add(o2); sList.add(o3);
 		
-		Comparator comparatorObj = new Comparator<Student>() {
+		Comparator<Student> comparatorObj = new Comparator<Student>() {
 
 			@Override
 			public int compare(Student o1, Student o2) {
