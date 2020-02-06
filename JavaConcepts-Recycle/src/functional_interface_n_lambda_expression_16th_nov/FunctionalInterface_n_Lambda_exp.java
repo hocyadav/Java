@@ -49,3 +49,11 @@ public class FunctionalInterface_n_Lambda_exp {
 		
 	}
 }
+/*
+hi
+default
+hi...2
+obj3 : 2
+hello 22
+
+*/
