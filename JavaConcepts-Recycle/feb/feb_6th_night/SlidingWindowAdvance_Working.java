@@ -2,7 +2,11 @@ package feb_6th_night;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * Find largest substring that contain 2 distinct character : Same problem as collect fruits only 2 basket 
+ * @author Hariom Yadav | 07-Feb-2020
+ *
+ */
 public class SlidingWindowAdvance_Working {
 	public static void main(String[] args) {
 		String str = "aaccd";
@@ -12,7 +16,6 @@ public class SlidingWindowAdvance_Working {
 		
 		int t2 = slidingWindow2(str, k);
 		System.out.println(t2);
-		
 		
 	}
 
