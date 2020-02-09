@@ -28,6 +28,12 @@ public class KthWeakestRow_soldiers {
 		 * 3. print 1st index value
 		 * 
 		 */
+		System.out.println();
+		int[] t = new int[3];
+		t = kWeakestRows2(arr1, 3);
+		System.out.println("print 1st k=3 element..");
+		printArray(t);
+		
 	}
 	
 	
@@ -87,6 +93,38 @@ public class KthWeakestRow_soldiers {
 		
 	}
 	
+	
+	private static int[] kWeakestRows2(int[][] mat, int k) {
+        List<int[]> list = new ArrayList<>();
+        
+        for(int i = 0; i < mat.length; i++) {
+            int count = 0;
+            for(int m : mat[i]) 
+                if(m == 1) count++;
+            list.add(new int[]{i, count});
+        }
+        
+        Comparator<int[]> cobj = new Comparator<int[]>() {
+            public int compare(int[] arr1, int[] arr2) {
+                if(arr1[1] > arr2[1])//sorting on 2nd index
+                    return 1;
+                else if(arr1[1] < arr2[1])
+                    return -1;
+                return 0;
+            }
+        };
+        
+        Collections.sort(list, cobj);
+        
+        int[] result = new int[k];
+        
+        for(int i = 0; i < k; i++) {
+            result[i] = list.get(i)[0];//storing 1st index
+        }
+        
+        return result;
+    }
+	
 }
 
 /**
@@ -103,5 +141,7 @@ After sorting based on 2nd index..
 2 4
 print 1st index 
 1 3 0 2 
+print 1st k=3 element..
+1 3 0 
 */
 
