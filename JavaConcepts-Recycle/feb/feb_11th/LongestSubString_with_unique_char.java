@@ -12,6 +12,27 @@ public class LongestSubString_with_unique_char {
 	public static void main(String[] args) {
 		String s = "abcabcd";
 		System.out.println(longestSubstaring(s));
+		System.out.println(longestSubstaring2(s));
+	}
+
+	private static int longestSubstaring2(String s) {
+		int longest = 0;
+		//empty check 
+		if(s == null || s.length() == 0) {
+			return longest;
+		}
+		//2 pointer
+		int l = 0;
+		Set<Character> set = new HashSet<>();
+		for(int r = 0; r < s.length(); r++) {
+			if(set.contains(s.charAt(r))) {//if duplicate found then clear set : i.e. we are deleting all visited char from set, same as for loop
+				set.clear();
+			}
+			set.add(s.charAt(r));
+			longest = Math.max(longest, set.size());
+		}
+		System.out.println("my set:"+ set);
+		return longest ;
 	}
 
 	private static int longestSubstaring(String s) {
@@ -36,3 +57,9 @@ public class LongestSubString_with_unique_char {
 	}
 
 }
+/**
+Set : [a, b, c, d]
+4
+my set:[a, b, c, d]
+4 
+ */
