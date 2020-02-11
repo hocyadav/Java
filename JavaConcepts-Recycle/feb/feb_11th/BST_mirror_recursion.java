@@ -46,3 +46,9 @@ public class BST_mirror_recursion {
 		obj.inorder();
 	}
 }
+/**
+ Inorder : 
+Inorder : 1 2 6 12 
+Inorder : 12 6 2 1 
+
+ */

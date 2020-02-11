@@ -74,3 +74,24 @@ public class DS_Stack {
 		
 	}
 }
+
+/**
+Stack : 
+Underflow..empty..
+Empty..-1
+Stack : 12 
+Stack : 12 14 
+Stack : 12 14 15 
+Stack : 12 14 15 16 
+Overflow..
+Stack : 12 14 15 16 
+Stack : 12 14 15 
+Stack : 12 14 
+Stack : 12 
+Stack : 
+Underflow..empty..
+Stack : 
+
+
+
+*/

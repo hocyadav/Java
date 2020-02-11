@@ -80,3 +80,9 @@ public class BST_to_Balanace_BST_recursion {
 		
 	}
 }
+/**
+Inorder : 
+Inorder : 1 2 6 12 
+Inorder : 1 2 6 12 
+
+*/
