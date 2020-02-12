@@ -10,7 +10,7 @@ import java.util.Set;
 public class LongestSubString_with_unique_char {
 
 	public static void main(String[] args) {
-		String s = "abcabcd";
+		String s = "abcabccccc";
 		System.out.println(longestSubstaring(s));
 		System.out.println(longestSubstaring2(s));
 	}
@@ -29,7 +29,7 @@ public class LongestSubString_with_unique_char {
 				set.clear();
 			}
 			set.add(s.charAt(r));
-			longest = Math.max(longest, set.size());
+			longest = Math.max(longest, set.size());//not true , use 2 pointer approach
 		}
 		System.out.println("my set:"+ set);
 		return longest ;
@@ -44,6 +44,7 @@ public class LongestSubString_with_unique_char {
 		//2 pointer
 		int l = 0;
 		Set<Character> set = new HashSet<>();
+		
 		for(int r = 0;r < s.length(); r++) {
 			while(set.contains(s.charAt(r))) {
 				set.remove(s.charAt(l));
@@ -52,6 +53,7 @@ public class LongestSubString_with_unique_char {
 			set.add(s.charAt(r));
 			longest = Math.max(longest, r - l + 1);
 		}
+		
 		System.out.println("Set : "+set);
 		return longest;//or we can return set size
 	}
