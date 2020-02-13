@@ -35,6 +35,16 @@ class LinkedList {
 		System.out.println();
 	}
 	
+	public void print2(Node head) {
+		Node t = head;
+		System.out.print("LL : ");
+		while(t != null) {
+			System.out.print(t.data +" ");
+			t = t.next;
+		}
+		System.out.println();
+	}
+	
 	public void reverse() {//2 pointer solution
 		Node t2 = head;
 		Node t1 = null;
@@ -54,18 +64,58 @@ class LinkedList {
 		head = t1;
 	}
 	
+	public void reverseGroup(int k) {
+		head = rec_reverse(head, k);
+	}
+
+	private Node rec_reverse(Node head, int k) {
+		//print2(head);
+		Node t2 = head;
+		Node t1 = null;
+		Node temp = null;
+		int count = 0;
+		System.out.print("before while : ");
+		print2(head);
+		while(count < k && t2 != null) {
+			temp = t2.next;
+			
+			t2.next = t1;
+			t1 = t2;
+			
+			t2 = temp;
+			
+			count++;
+		}
+		System.out.print("after while : ");
+		print2(head);
+		//print();
+		if(t2 != null) {
+			System.out.println("t2 (next k 1st node): "+t2.data+" - head (previous k 1st node) : "+head.data);
+			//print2(head);
+			Node tt = rec_reverse(t2, k);
+			System.out.print("--head.next ");
+			print2(tt);
+			head.next = tt;
+		}
+		System.out.print("t1 : ");
+		print2(t1);
+		return t1;
+	}
 }
 
 public class ReverseLL_2p_que {
 	public static void main(String[] args) {
 		LinkedList obj = new LinkedList();
-		obj.print();
-		obj.add1stPlace(1);obj.print();
-		obj.add1stPlace(3);obj.print();
-		obj.add1stPlace(5);obj.print();
-		obj.add1stPlace(10);obj.print();
-		obj.add1stPlace(500);obj.print();
-		obj.reverse();obj.print();
+		//obj.print();
+		obj.add1stPlace(1);//obj.print();
+		obj.add1stPlace(3);//obj.print();
+		obj.add1stPlace(5);//obj.print();
+		obj.add1stPlace(10);//obj.print();
+		obj.add1stPlace(500);//obj.print();
+		obj.add1stPlace(88);//obj.print();
+		obj.add1stPlace(9);obj.print();
+//		obj.reverse();obj.print();
+		obj.reverseGroup(3); obj.print();
 	}
 }
 /**
