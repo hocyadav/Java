@@ -103,7 +103,7 @@ class LinkedList {
 	}
 }
 
-public class ReverseLL_2p_que {
+public class ReverseLL_2p_que_GroupK {
 	public static void main(String[] args) {
 		LinkedList obj = new LinkedList();
 		//obj.print();
