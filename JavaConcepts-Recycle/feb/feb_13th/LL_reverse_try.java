@@ -56,15 +56,21 @@ class LinkedL {
 	public void reverseLL_K_Group(int k) {
 		head = _reverseLLGroup(head, k);
 	}
+	
+	public void reverseLL_K_Group2(int k) {
+		head = reverseKGroup(head, k);
+	}
 
 	private Node _reverseLLGroup(Node head, int k) {//2 pointer : same as sinle ll reverse
 		Node p2 = head;//for traversal
 		Node p1 = null;
 		Node temp = null;
 		int count = 0;
+		
 		while(p2 != null && count < k) {
 			temp = p2.next;
-			p2.next = p1;
+			
+			p2.next = p1;//add p2 before p1
 			p1 = p2;
 			
 			p2= temp;
@@ -75,6 +81,32 @@ class LinkedL {
 		}
 		return p1;
 	}
+	
+	
+	public Node reverseKGroup(Node head, int k) {//2 pointer + recursion
+		Node p2 = head;//pointer 1 for traversal
+		Node p1 = null;
+		Node helper = null;
+        int count = 0;
+        
+        while(p2 != null && count < k ) {//traversal
+            helper = p2.next;
+            
+            p2.next = p1;//add p2 before p1
+            p1 = p2;
+            
+            p2 = helper; //i++
+            count++;
+        }
+        
+        if(p2 != null) {//p2 is start of next list, so checking for not null
+            //head.next is last node of before list, so update it
+            head.next = reverseKGroup(p2, k);
+            
+        }
+        
+        return p1;
+    }
 }
 
 public class LL_reverse_try {
@@ -85,10 +117,14 @@ public class LL_reverse_try {
 		obj.addLast(13); obj.print();
 		obj.addLast(14); obj.print();
 		obj.addLast(15); obj.print();
-		System.out.println("reverse ");
-		obj.reverseLL(); obj.print();
+		obj.addLast(16); obj.print();
+		//System.out.println("reverse ");
+		//obj.reverseLL(); obj.print();
 		System.out.println("reverse in k group");
-		obj.reverseLL_K_Group(2); obj.print();
+		//obj.reverseLL_K_Group(3); obj.print();
+		obj.reverseLL_K_Group2(2); obj.print();
+		
+		
 	}
 }
 /**
