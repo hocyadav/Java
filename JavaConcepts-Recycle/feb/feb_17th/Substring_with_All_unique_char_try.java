@@ -7,13 +7,13 @@ import java.util.Set;
  * @author Hariom Yadav | 17-Feb-2020
  *
  */
-public class Substring_with_2_unique_char_try {
+public class Substring_with_All_unique_char_try {
 	public static void main(String[] args) {
 		String s = "abcabcdfr";
-		substring2uniqueChar(s);
+		substringAlluniqueChar("bbbbb");
 	}
 
-	private static void substring2uniqueChar(String s) {
+	private static void substringAlluniqueChar(String s) {
 		if(s == null || s.length() == 0) {
 			System.out.println("");
 			return;

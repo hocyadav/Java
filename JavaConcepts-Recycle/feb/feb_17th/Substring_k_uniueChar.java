@@ -11,7 +11,7 @@ public class Substring_k_uniueChar {
 	public static void main(String[] args) {
 		String s = "abbbbba";
 		int k =2;
-		substringKuniqueChar(s, k);
+		substringKuniqueChar("121133", k);
 	}
 
 	private static void substringKuniqueChar(String s, int k) {
