@@ -53,7 +53,7 @@ public class ThreadClassRunnableInterface {
 		//above one go to cpu scheduler same time and print any one any order 
 		//here schedure knows thread 1 comes 1st so print this request in 1st priority
 		obj1.start();
-		Thread.sleep(10);
+		Thread.sleep(10);//this makes cpu scheduler to give thread 1 as high priority
 		obj2.start();
 		
 	}
