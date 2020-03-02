@@ -119,18 +119,22 @@ class BST{
 public class BST_impl_array {
 	public static void main(String[] args) {
 		BST obj = new BST();
-		obj.insert(12); obj.insert(20);
-		obj.insert(4); obj.inorder_DFS();
+		obj.insert(12); obj.insert(20); obj.insert(4); 
+		
+		obj.inorder_DFS();
 		System.out.println();
+		
 		obj.levelOrderTraversal_BFS();
 		System.out.println();
 		
 		System.out.print("Right to left : ");
 		obj.levelOrderTraversal_BFS2_right_to_left_zig_zag();
-		obj.insert(3);
 		System.out.println();
+		
+		obj.insert(3);
 		obj.inorder_DFS();
-		//obj.levelOrderTraversal_BFS2_right_to_left_zig_zag();
+		System.out.println();
+		obj.levelOrderTraversal_BFS2_right_to_left_zig_zag();
 
 		
 	}
