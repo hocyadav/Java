@@ -75,19 +75,14 @@ class BST{
 	
 	public void levelOrderTraversal_BFS() {
 		Queue<Node> q = new LinkedList<>();
-		
 		q.add(root);
-		
 		while(!q.isEmpty()) {
 			Node t = q.poll();
 			System.out.print(t.data+" ");
 			
-			if(t.left != null)
-				q.add(t.left);
-			if(t.right != null)
-				q.add(t.right);
+			if(t.left != null) q.add(t.left);
+			if(t.right != null) q.add(t.right);
 		}
-		
 	}
 	
 	public void levelOrderTraversal_BFS2_right_to_left_zig_zag() {
