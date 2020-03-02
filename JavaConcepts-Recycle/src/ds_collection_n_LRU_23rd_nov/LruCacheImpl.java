@@ -14,7 +14,6 @@ class Lru{
 	Deque<Integer> dq ;//element present in DQ takes n time : o(n)
 	HashSet<Integer> set;//only to make element present in DQ or not : o(1)
 	int size;
-	
 	public Lru(int s){
 		size = s;
 		dq = new LinkedList<>();
@@ -43,7 +42,9 @@ class Lru{
 			}
 		}
 	}
-	
+	/**
+	 * Print Dequeu
+	 */
 	public void print() {
 		Iterator<Integer> it = dq.iterator();
 		System.out.print("LRU cache : ");
@@ -52,7 +53,6 @@ class Lru{
 		}
 		System.out.println();
 	}
-	
 }
 
 public class LruCacheImpl {
@@ -112,7 +112,4 @@ LRU cache : 5 11 22 33
 LRU cache : 11 5 22 33 
 LRU cache : 6 11 5 22 
 LRU cache : 11 6 5 22 
-
-
-
 */
