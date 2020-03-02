@@ -11,8 +11,8 @@ import java.util.LinkedList;
  */
 //data structure used - deque + set or hashmap
 class Lru{
-	Deque<Integer> dq ;//element present in DQ takes n time
-	HashSet<Integer> set;//only to make element present in DQ or not
+	Deque<Integer> dq ;//element present in DQ takes n time : o(n)
+	HashSet<Integer> set;//only to make element present in DQ or not : o(1)
 	int size;
 	
 	public Lru(int s){
@@ -24,13 +24,12 @@ class Lru{
 	public void refer(int key) {
 		if(! set.contains(key)) {//key not present in cache
 			if(dq.size() == size) {
-				set.remove(dq.removeLast());
+				set.remove(dq.removeLast());//1. remove last ele from dq, 2. then delete from set
 			}
-			dq.addFirst(key);
+			dq.addFirst(key);//add in db and set
 			set.add(key);
 		}else {//key present in cache
-			//get key location
-			if(dq.getFirst() != key) {
+			if(dq.getFirst() != key) {//get key location
 				Iterator<Integer> it = dq.iterator();
 				while(it.hasNext()) {
 					if(it.next() == key) {
@@ -40,7 +39,7 @@ class Lru{
 				}
 				//dq.remove(index);//not removing that element from list - since this is DQ not array
 				dq.addFirst(key);
-				//set.add(key);
+				//set.add(key);//since we changing position of element so adding in set not required
 			}
 		}
 	}
@@ -56,7 +55,6 @@ class Lru{
 	
 }
 
-
 public class LruCacheImpl {
 	public static void main(String[] args) {
 		Lru obj = new Lru(4);
@@ -67,6 +65,7 @@ public class LruCacheImpl {
 		
 		obj.refer(22); obj.print();
 		obj.refer(22); obj.print();
+		obj.refer(11); obj.print();
 		obj.refer(22); obj.print();
 		
 		obj.refer(33); obj.print();
@@ -88,7 +87,32 @@ public class LruCacheImpl {
 		
 		obj.refer(6); obj.print();
 		obj.refer(11); obj.print();
-		
 	}
-
 }
+/**
+LRU cache : 11 
+LRU cache : 11 
+LRU cache : 11 
+LRU cache : 11 
+LRU cache : 22 11 
+LRU cache : 22 11 
+LRU cache : 11 22 
+LRU cache : 22 11 
+LRU cache : 33 22 11 
+LRU cache : 33 22 11 
+LRU cache : 33 22 11 
+LRU cache : 22 33 11 
+LRU cache : 22 33 11 
+LRU cache : 22 33 11 
+LRU cache : 11 22 33 
+LRU cache : 11 22 33 
+LRU cache : 11 22 33 
+LRU cache : 11 22 33 
+LRU cache : 5 11 22 33 
+LRU cache : 11 5 22 33 
+LRU cache : 6 11 5 22 
+LRU cache : 11 6 5 22 
+
+
+
+*/
