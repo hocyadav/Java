@@ -42,7 +42,7 @@ class Graph {
 		// recursion : inside make visited true + get list + check visted and call dfs recursion
 		
 		boolean[] visited = new boolean[vSize];
-		DFS_rec(visited, 2);//start vertex
+		DFS_rec(visited, 3);//start vertex
 		System.out.println();
 		
 	}
@@ -69,7 +69,7 @@ public class Graph_LinkedList_IMPL {
 		Graph obj = new Graph(4);
 		obj.printGraphNodes();
 		obj.addEdge(0, 1); obj.printGraphNodes();
-		obj.addEdge(1, 2);
+		obj.addEdge(0, 2);
 		obj.addEdge(2, 3);obj.printGraphNodes();
 		obj.addEdge(3, 2);
 		obj.printGraphNodes();

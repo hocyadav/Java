@@ -9,7 +9,7 @@ public class Student_2 {
 	int roll;
 	
 	public Student_2(String name, int roll) {
-		super();
+		//super();
 		this.name = name;
 		this.roll = roll;
 	}

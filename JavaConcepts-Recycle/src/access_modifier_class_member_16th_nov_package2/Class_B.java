@@ -7,9 +7,9 @@ public class Class_B {
 		Class_A obj = new Class_A();
 		
 		obj.i = 9;
-		//Problem : not visible - coz class memeber is default
-		//Solution : make class member as public 
-		obj.j =10;//public class member - so visible outside package 
+		//Problem : not visible - coz this class is public (that's why we are able to create obj here) but inside memeber "i" is default(that means i can be visible inside that package)
+		//Solution : make "i" as public 
+		obj.j =10;//class public , "j" public - so visible outside package 
 		
 	}
 }

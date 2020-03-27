@@ -32,7 +32,7 @@ class Graph{
 		
 	}
 	
-	//only difference is call DFS util in for loop so that disconnected verted can be covered
+	//only difference is call DFS util in for loop so that disconnected vertex can be covered
 	public void DFS_Disconnected_Graph() {
 		//1. visited boolean 
 		//2. call DFS util that will work like Queue

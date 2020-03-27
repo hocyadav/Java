@@ -65,7 +65,7 @@ public class DS_Heap_impl {
 
 	private static void buildHeap(int[] arr, int len) {
 		//call non leaf node to 0 call heapify
-		int nn_node = (len / 2) - 1;
+		int nn_node = (len / 2) - 1;//nn leaf = half - 1 or use half , both will give same ans, remove - 1 and check output
 		for(int k = nn_node; k >= 0; k--) {
 			heapify(arr, len, k);
 		}

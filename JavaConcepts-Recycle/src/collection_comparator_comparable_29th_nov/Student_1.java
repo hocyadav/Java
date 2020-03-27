@@ -4,7 +4,7 @@ import java.util.Comparator;
 /**
  * 
  * @author Hariom Yadav | 29-Nov-2019
- *
+ * Comparator is a functional interface 
  */
 public class Student_1 implements Comparator<Student_1>{//comparator required import java.util.Comparator
 	String name;

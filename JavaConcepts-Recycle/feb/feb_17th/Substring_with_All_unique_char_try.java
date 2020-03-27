@@ -10,7 +10,7 @@ import java.util.Set;
 public class Substring_with_All_unique_char_try {
 	public static void main(String[] args) {
 		String s = "abcabcdfr";
-		substringAlluniqueChar("bbbbb");
+		substringAlluniqueChar("abcabcdfr");
 	}
 
 	private static void substringAlluniqueChar(String s) {

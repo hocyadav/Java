@@ -13,8 +13,6 @@ public class MatrixRoation90 {
 		printArry(arr);
 		rotateArry(arr);
 		printArry(arr);
-		
-		
 	}
 
 	private static void rotateArry(int[][] arr) {

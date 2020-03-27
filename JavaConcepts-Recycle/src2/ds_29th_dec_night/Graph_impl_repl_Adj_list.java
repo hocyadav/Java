@@ -26,9 +26,9 @@ class Graph{//this is minimum basic impl of graph
 	 * @param src
 	 * @param dest
 	 */
-	public void addEdge(int src, int dest) {
-		adjList[src].add(dest);
-		adjList[dest].add(src);
+	public void addEdge(int src, int dest) {//undirected both side addition required s-->d and d-->s 
+		adjList[src].add(dest); //s-->d
+		adjList[dest].add(src); //d-->s
 	}
 	
 	/**
@@ -75,8 +75,6 @@ public class Graph_impl_repl_Adj_list {
 	}
 }
 /**
-
-
 0 -> 1 
 1 -> 0 
 2 -> 
@@ -95,8 +93,4 @@ public class Graph_impl_repl_Adj_list {
 3 -> 1 2 4 
 4 -> 0 1 3 
 ---------
-
-
-
-
 */

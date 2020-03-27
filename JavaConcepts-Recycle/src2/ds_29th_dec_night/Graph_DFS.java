@@ -6,7 +6,6 @@ import java.util.Iterator;
  * @author Hariom Yadav | 29-Dec-2019
  *
  */
-
 class GraphDFS extends Graph{//extending graph impl and adding dfs method
 
 	public GraphDFS(int vsize) {
@@ -34,13 +33,8 @@ class GraphDFS extends Graph{//extending graph impl and adding dfs method
 				dfsUtil(visited, vv);
 			}
 		}
-		
-		
 	}
-	
-	
 }
-
 
 public class Graph_DFS {
 	public static void main(String[] args) {
@@ -50,7 +44,7 @@ public class Graph_DFS {
 		obj.addEdge(1, 4); 
 		obj.addEdge(1, 2); 
 		obj.addEdge(1, 3); 
-		//obj.addEdge(2, 1); //not required since we undirected so we are adding both 
+		//obj.addEdge(2, 1); //not required since undirected so we are adding both 
 		obj.addEdge(2, 3); 
 		//obj.addEdge(3, 1); 
 		obj.addEdge(3, 4); 
@@ -60,8 +54,27 @@ public class Graph_DFS {
 		//obj.addEdge(4, 1);
 		
 		obj.print();
-		
 		obj.dfsConnected(0);
-		
 	}
 }
+/**
+0 -> 1 
+1 -> 0 
+2 -> 
+3 -> 
+4 -> 
+---------
+0 -> 1 4 
+1 -> 0 
+2 -> 
+3 -> 
+4 -> 0 
+---------
+0 -> 1 4 
+1 -> 0 4 2 3 
+2 -> 1 3 
+3 -> 1 2 4 
+4 -> 0 1 3 
+---------
+0 1 4 3 2 
+*/

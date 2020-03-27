@@ -1,6 +1,7 @@
 package coding_11th_nov;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.Vector;
@@ -66,7 +67,8 @@ class BST{
 		//declare hash map - with key and value as linked list
 		//HashMap<Integer, Vector<Node>> hmap = new HashMap<Integer, Vector<Node>>();
 		//take treemap that will be sorted
-		TreeMap<Integer, Vector<Integer>> hmap = new TreeMap<>();
+		Map<Integer, Vector<Integer>> hmap = new TreeMap<>();
+		//TreeMap<Integer, Vector<Integer>> hmap = new TreeMap<>();//above and below line are same
 		//call inorder and save in this hmap
 		int distance = 0;//root as 0 distance , move left and -1, right +1
 		//verticalUtility(root, hmap, hmap.size(), distance);
@@ -86,7 +88,7 @@ class BST{
 	 * @param size
 	 * @param distance
 	 */
-	private void verticalUtility(Node root, TreeMap<Integer,Vector<Integer>> hmap, int distance) {
+	private void verticalUtility(Node root, Map<Integer,Vector<Integer>> hmap, int distance) {
 		//get distance value from hasmap and return vector(linked list), 
 		if(root == null)
 			return;

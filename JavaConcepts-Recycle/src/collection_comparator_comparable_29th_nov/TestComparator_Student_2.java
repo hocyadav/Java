@@ -29,7 +29,7 @@ public class TestComparator_Student_2 {
 		//Collections.sort(listOfStudents);// error - this will take only comparable argument class obj
 		
 		//writing logic for sorting
-		Comparator<Student_2> obj = new Comparator<Student_2>() {
+		Comparator<Student_2> obj123 = new Comparator<Student_2>() {
 			@Override
 			public int compare(Student_2 o1, Student_2 o2) {
 				if(o1.roll > o2.roll) return 1;
@@ -39,7 +39,7 @@ public class TestComparator_Student_2 {
 		};
 		
 		//soring based on my logic : logic store in comparator object --> obj
-		Collections.sort(listOfStudents, obj);//this will take list + new comparator obj
+		Collections.sort(listOfStudents, obj123);//this will take list + new comparator obj
 		
 		System.out.print("Sorted list : ");
 		print(listOfStudents);

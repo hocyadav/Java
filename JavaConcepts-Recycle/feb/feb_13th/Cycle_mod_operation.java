@@ -30,8 +30,27 @@ public class Cycle_mod_operation {
 		int loop =  6 % arr.length;
 		System.out.println("input after cycle : "+loop);
 		
-		loop = loop +  step - 1;
+		loop = loop +  step - 1;//IMP
 		System.out.println("new start from  : "+loop);
 		System.out.println("--------------");
 	}
 }
+/**
+input 	: 6
+input after cycle : 1
+new start from  : 1
+--------------
+input 	: 6
+input after cycle : 1
+new start from  : 2
+--------------
+input 	: 6
+input after cycle : 1
+new start from  : 5
+--------------
+input 	: 6
+input after cycle : 1
+new start from  : 6
+--------------
+
+*/

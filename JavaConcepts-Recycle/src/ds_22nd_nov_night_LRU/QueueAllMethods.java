@@ -15,6 +15,7 @@ public class QueueAllMethods {
 		qq.add(1);
 		qq.add(2);
 		qq.add(3);
+	
 		System.out.println(qq);
 		
 		//remove - dequeue in Queue .. last added deleted first, so remove 1

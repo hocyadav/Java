@@ -9,7 +9,7 @@ import java.util.Set;
  */
 public class LongestSubstring_with_uniqueChar {
 	public static void main(String[] args) {
-		String s = "abcabc";
+		String s = "pwwkew";
 		System.out.println(longestSubstring(s));
 		
 		String s2 = "abcabcccc";

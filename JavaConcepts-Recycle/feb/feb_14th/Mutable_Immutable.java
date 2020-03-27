@@ -19,14 +19,17 @@ class MutableClass {//normal class
 	}
 	
 }
-
-final class ImmutableClass {//final class + no setter
+//make class final : cant be extended
+//make fields final : direct access not allowed
+//only getter no setter
+//make mutable field final : value can be assign only once
+final class ImmutableClass {//final class + no setter + all mutable fields make final
 	String s;
 	
 	public ImmutableClass(String s) {
 		this.s = s;
 	}
-	public String getS() {
+	public final String getS() {//mutable field : make final (optional >??)
 		return s;
 	}
 	

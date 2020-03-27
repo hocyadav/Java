@@ -23,9 +23,9 @@ public class TestComparable_Student {
 		System.out.print("Intial list : ");
 		print(listOfStudents);
 		
-		Collections.sort(listOfStudents);
+		Collections.sort(listOfStudents);//sort() method expect that have implemented comparable interface
 		
-		System.out.print("Sorted list : ");
+		System.out.print("Sorted list : ");//based on roll num
 		print(listOfStudents);
 		
 	}

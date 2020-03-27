@@ -40,7 +40,7 @@ class List{
 		
 		Node t2 = head;
 		while(t2 != null) {
-			if(t2.data == ss.pop()) {
+			if(t2.data == ss.pop()) {//pop from stack and compare
 				t2 = t2.next;
 				continue;
 			}else {
@@ -52,6 +52,25 @@ class List{
 		System.out.println("Same ");
 		
 	}
+	//same as above ??: while loop change , if condition is on reverse of above
+	public boolean isPalindrome() {
+		Node head = this.head;
+		
+		
+        Node current=head;
+        Stack <Integer> stack = new Stack <Integer>();
+        while (current!=null){
+            stack.push(current.data);
+            current=current.next;
+        }
+        current=head;
+        while (current!=null){
+            if (current.data!=stack.pop())
+                return false;
+            current=current.next;
+        }
+        return true;
+    }
 
 	public void palindromeUsingLLreverse() {
 		Node t = head;
@@ -103,7 +122,7 @@ public class Linked_List_Palindrome_usingStack_usingLLreverse {
 		obj.add(1);obj.print();
 		obj.palindromeUsingStack();
 		obj.palindromeUsingLLreverse();
-		
+		//System.out.println(obj.isPalindrome());//testing
 		
 	}
 }

@@ -24,8 +24,8 @@ class LL{
 		Node2 fast = head;
 		
 		while(slow != null && fast != null && fast.next != null) {
-			slow = slow.next;
-			fast = fast.next.next;
+			slow = slow.next;//jump 1 step
+			fast = fast.next.next; //jump 2 step
 			if(slow == fast)//if loop then it will never exit so checking for equal condition
 				return true;
 		}

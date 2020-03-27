@@ -4,12 +4,12 @@ package ds_28th_dec;
  * @author Hariom Yadav | 28-Dec-2019
  *
  */
-class Stack{
+class Stack_class{
 	int top;
 	int size;
 	int[] stack;
 	
-	public Stack(int size) {
+	public Stack_class(int size) {
 		super();
 		this.size = size;
 		this.stack = new int[this.size];
@@ -72,7 +72,7 @@ class Stack2{//stack with only main case not edge case
 public class Stack_impl_array {
 
 	public static void main(String[] args) {
-		Stack obj = new Stack(4);
+		Stack_class obj = new Stack_class(4);
 		obj.pop();
 		obj.print();
 		obj.push(12);obj.print();

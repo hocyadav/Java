@@ -18,13 +18,14 @@ class Node{
 
 class BST{
 	Node root;
-	
+	//int treeSum = 0;
 	public void TreeIsBstOrNot() {
 		boolean b = rec_bstOrNot(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
 		if(b)
 			System.out.println("Binary Tree is BST");
 		else
 			System.out.println("Binary Tree is not BST");
+		//System.out.println(treeSum);
 	}
 
 	private boolean rec_bstOrNot(Node root, int min, int max) {
@@ -32,7 +33,7 @@ class BST{
 			return true;
 		if(root.data < min || root.data > max)
 			return false;
-		
+		//treeSum += root.data;
 		boolean left = rec_bstOrNot(root.left, min, root.data-1);
 		boolean right = rec_bstOrNot(root.right, root.data+1, max);
 		return left && right;

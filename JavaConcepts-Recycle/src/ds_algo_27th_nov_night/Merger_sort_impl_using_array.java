@@ -56,11 +56,13 @@ public class Merger_sort_impl_using_array {
 		
 		while(i<l_len && j<r_len) {
 			if(l_arr[i] < r_arr[j]) {
-				arr[k] = l_arr[i];
-				k++; i++;
+//				arr[k] = l_arr[i];
+//				k++; i++;
+				arr[k++] = l_arr[i++];//above 2 line is same as this single line
 			}else {
 				arr[k] = r_arr[j];
 				k++; j++;
+				//arr[k++] = r_arr[j++]; // same as above 2 line
 			}
 		}
 		

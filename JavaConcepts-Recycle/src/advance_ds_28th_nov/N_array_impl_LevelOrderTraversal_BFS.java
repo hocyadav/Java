@@ -18,13 +18,10 @@ class NArry{
 	//know something
 	Node root;
 	
-	
 	//does something
-	
 	public void insert(int key) {
 		root = rec_insert(root, key);
 	}
-	
 	
 	private Node rec_insert(Node root2, int key) {
 		Node nn = new Node(key);
@@ -35,10 +32,8 @@ class NArry{
 		}else {//TODO 
 			//traverse(for loop children) and get correct node --> then insert
 		}
-		
 		return null;
 	}
-
 
 	public void NArrayLevelOrderTraversal() {
 		Queue<Node> qq = new LinkedList<>();

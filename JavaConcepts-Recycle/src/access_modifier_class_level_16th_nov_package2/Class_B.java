@@ -9,7 +9,7 @@ public class Class_B {
 		//-here we are trying to access from outside other package(folder) so not visible
 		
 		//solution : make Class_A as public + import that package here
-		//TRY : after above solution make class as default but dont remove import package from here 
+		//TRY : after above solution make class as default but dint remove import package from here 
 		//we will get error "Clas_A is not visible"
 		
 	}

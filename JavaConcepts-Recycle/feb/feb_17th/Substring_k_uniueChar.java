@@ -11,7 +11,7 @@ public class Substring_k_uniueChar {
 	public static void main(String[] args) {
 		String s = "abbbbba";
 		int k =2;
-		substringKuniqueChar("121133", k);
+		substringKuniqueChar("abc", 3);
 	}
 
 	private static void substringKuniqueChar(String s, int k) {
@@ -26,7 +26,9 @@ public class Substring_k_uniueChar {
 		for(int r = 0; r < s.length(); r++) {
 			int count = map.getOrDefault(map.get(s.charAt(r)), 0);
 			map.put(s.charAt(r), count + 1);
-			
+			if(map.size() == 3) {
+				System.out.println("3 count");
+			}
 			if(map.size() > k) {
 				int c = map.get(s.charAt(l));
 				map.put(s.charAt(l), c - 1);

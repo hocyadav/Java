@@ -78,7 +78,7 @@ class LinkedL2{
 	}
 	
 	
-	public void reverseLL() {
+	public void reverseLL() {// 2 pointer question
 		Node2 t2 = head;
 		Node2 t1 = null, next;
 		
@@ -90,11 +90,7 @@ class LinkedL2{
 		}
 		head = t1;
 	}
-	
-	
 }
-
-
 
 
 public class LinkedListReverseImpl{

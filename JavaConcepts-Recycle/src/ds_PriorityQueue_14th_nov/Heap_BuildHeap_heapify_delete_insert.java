@@ -5,7 +5,6 @@ package ds_PriorityQueue_14th_nov;
  *
  */
 
-
 //ds - array
 
 public class Heap_BuildHeap_heapify_delete_insert {
@@ -86,7 +85,7 @@ public class Heap_BuildHeap_heapify_delete_insert {
 		//find non leaf node
 		int nn = len/2 - 1;
 		
-		for(int i=nn; i>=0 ; i--)
+		for(int i = nn; i >= 0 ; i--)
 			heapify(arr, len, i);
 	}
 	

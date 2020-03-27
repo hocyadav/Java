@@ -12,10 +12,7 @@ public class Longest_Palindrom_Subsequence_recursion {
 		System.out.println(t);
 		
 		int t2 = fun_Dynamic(s.toCharArray());//TODO
-		
-		
 	}
-
 	
 	private static int fun_Dynamic(char[] charArray) {
 		int[][] dp = new int[charArray.length][charArray.length];
@@ -44,7 +41,6 @@ public class Longest_Palindrom_Subsequence_recursion {
 			return 2 + fun_Recursion(arr, startIndex + 1, endIndex - 1);//last 2 char are same thats why adding 2
 		} else 
 			return Math.max(fun_Recursion(arr, startIndex, endIndex - 1), fun_Recursion(arr, startIndex + 1, endIndex));
-		
 	}
 }
 //5

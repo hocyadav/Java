@@ -20,7 +20,7 @@ class GraphD extends Graph{
 		
 		//super.DFSUtil(startVertex, visited);
 		
-		for(int i=0; i<vertexSize; i++) {
+		for(int i=0; i<vertexSize; i++) {//calling for all vertex since disconnected
 			if(visited[i] == false) {//not visited 
 				super.DFSUtil(i, visited);//TODO: why protected required
 			}

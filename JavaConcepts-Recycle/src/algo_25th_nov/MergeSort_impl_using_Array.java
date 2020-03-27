@@ -37,7 +37,7 @@ public class MergeSort_impl_using_Array {
 	private static void mergeTwoSortedArray(int[] arr, int start, int mid, int end) {
 		//size of 2 sub array
 		int leftSize	= (mid - start) + 1;//end - start + 1
-		int rightSize	= (end - mid);//start index is mid+1
+		int rightSize	= (end - mid);		//start index is mid+1
 		
 		//2 temp array + copy all left and right array content
 		int[] leftArr 	= new int[leftSize];
