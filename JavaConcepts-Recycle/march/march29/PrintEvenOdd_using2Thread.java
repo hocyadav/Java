@@ -1,11 +1,16 @@
 package march29;
+/**
+ * 
+ * @author Hariom Yadav | 30-Mar-2020
+ *
+ */
 
-//thread even
-//thread odd
-
-//printer class
-
-
+//1. thread even calss
+	//call even method
+//2. thread odd class
+	//call odd method
+//3. printer class -> 2 methods printEven and printOdd
+// https://javaconceptoftheday.com/print-odd-and-even-numbers-by-two-threads-in-java/
 class ThreadEven implements Runnable {
 	int number;
 	PrinterObj printObj;
@@ -66,7 +71,7 @@ class PrinterObj {
 			while(flag == false)//while is similar to if
 				wait();//wait, notify and notifiALl method is present in Object class
 		}
-		if(flag == true) {
+		if(flag == true) {//else if , not required
 			System.out.println(Thread.currentThread().getName()+ i);
 			flag = false;
 			notify();
@@ -77,7 +82,7 @@ class PrinterObj {
 		if(flag == true) {
 			while(flag == true) wait();			
 		}
-		else if(flag == false) {
+		if(flag == false) {
 			System.out.println(Thread.currentThread().getName()+ i);
 			flag = true;
 			notify();
@@ -104,3 +109,17 @@ public class PrintEvenOdd_using2Thread {
 		
 	}
 }
+/**
+odd 	thread - 1
+even 	thread - 2
+odd 	thread - 3
+even 	thread - 4
+odd 	thread - 5
+even 	thread - 6
+odd 	thread - 7
+even 	thread - 8
+odd 	thread - 9
+even 	thread - 10
+
+
+*/
