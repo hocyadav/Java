@@ -15,32 +15,25 @@ import java.util.Map;
 class BinaryTree{
 	Node root;
 	HashMap<Integer, List<Node> > map = new HashMap<>();
-	
-	
+
 	public void leftView() {
-		storeEachLevelInHashMap(root,0);
-		
+		storeEachLevelInHashMap(root,0);//1. Store level order in map
 		System.out.print("Left view of BT : ");
-		print1stValueFromLevelOrder();
+		print1stValueFromLevelOrder();//2. Get 1st element from map list
 	}
 
 	private void print1stValueFromLevelOrder() {
-		
 		Iterator it = map.entrySet().iterator();//get entry set obj(all key value will be iterator) --> then iterator from that obj
-		
 		while(it.hasNext()) {
 			Map.Entry mm = (Map.Entry)it.next();//get entry obj
 			List<Node> l = (List<Node>) mm.getValue();//type cast value
 			//System.out.println(l);
 			System.out.print(l.get(0).data +" ");
 		}
-		
 	}
 
 	private void storeEachLevelInHashMap(Node root, int level) {
-		
-		if(root == null)
-			return;
+		if(root == null) return;
 		
 		List<Node> listOfNodeAtEachLevel = map.get(level);
 		
@@ -55,9 +48,7 @@ class BinaryTree{
 		
 		storeEachLevelInHashMap(root.left, level+1);
 		storeEachLevelInHashMap(root.right, level+1);
-		
 	}
-	
 }
 
 public class Left_View_Of_Binary_Tree_using_DFS_print1stNode_using_HashMap {
