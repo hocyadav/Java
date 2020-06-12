@@ -2,7 +2,7 @@ package concept_4th_jan;
 /**
  * 
  * @author Hariom Yadav | 04-Jan-2020
- *
+ *https://www.geeksforgeeks.org/window-sliding-technique/
  */
 public class Sliding_WIndow_concept {
 
