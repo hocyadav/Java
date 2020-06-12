@@ -15,6 +15,7 @@ public class Sliding_WIndow_concept {
 	}
 	
 	//TC : n*k //2 for loop : 1st for loop n-k times 2nd for loop k times
+	//Brute Force 
 	private static void slidingWindow2(int[] arr, int length, int k) {
 		int max = Integer.MIN_VALUE;
 		
@@ -30,6 +31,7 @@ public class Sliding_WIndow_concept {
 	}
 	
 	//TC : n
+	//Window Sliding Technique
 	private static void slidingWindow(int[] arr, int length, int k) {
 		int firstKMax = 0;
 		for(int i=0; i<k; i++)
