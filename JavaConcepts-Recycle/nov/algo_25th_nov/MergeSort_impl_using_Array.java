@@ -7,20 +7,19 @@ package algo_25th_nov;
 public class MergeSort_impl_using_Array {
 	public static void main(String[] args) {
 		int[] arr = {2,4,1,6,9,8,3};
-		
-		for(int i:arr)
-			System.out.print(i+" ");
-		System.out.println();
+		print_(arr);
 		
 		int start	= 0;
 		int end		= arr.length-1;
 		mergeSort(arr,start, end);
 		
+		print_(arr);
+	}
+
+	private static void print_(int[] arr) {
 		for(int i:arr)
 			System.out.print(i+" ");
 		System.out.println();
-		
-		
 	}
 
 	private static void mergeSort(int[] arr, int start, int end) {//find min, call recursive left right, merger both 
@@ -28,8 +27,8 @@ public class MergeSort_impl_using_Array {
 			return;
 		else {
 			int mid = (start+end)/2;
-			mergeSort(arr, start, mid);//1st sorted arry
-			mergeSort(arr, mid+1, end);//2nd sorted arry
+			mergeSort(arr, start, mid);//1st sorted arry - from start index to min
+			mergeSort(arr, mid+1, end);//2nd sorted arry - from mid+1 index to end
 			mergeTwoSortedArray(arr, start, mid, end);//merge 2 sorted array
 		}
 	}
